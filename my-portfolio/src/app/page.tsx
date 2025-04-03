@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TechBadge from "../components/TechBadge";
 
 export default function Home() {
   return (
@@ -23,6 +24,60 @@ export default function Home() {
           <li className="tracking-[-.01em]">
             Save and see your changes instantly.
           </li>
+          <TechBadge
+            tech="typescript"
+            size="sm"
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="nextjs"
+            size="sm"
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="react"
+            size="md"
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="tailwindcss"
+            size="sm"
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="vercel"
+            size="lg" 
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="docker"
+            size="lg"
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="awslambda"
+            size="lg"
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="redux"
+            size="lg"
+            showLabel={true}
+            className="mt-4"
+          />
+          <TechBadge
+            tech="javascript"
+            size="lg"
+            showLabel={false}
+            className="mt-4"
+          />
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">

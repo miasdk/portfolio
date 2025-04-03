@@ -23,30 +23,8 @@ import {
   SiDocker,
   SiAwslambda,
 } from 'react-icons/si';
+import { Technology } from '../types';
 
-export type Technology = 
-  | "typescript"
-  | "javascript"
-  | "react"
-  | "nextjs"
-  | "tailwindcss"
-  | "graphql"
-  | "prisma"
-  | "nodejs"
-  | "express"
-  | "postgresql"
-  | "mongodb"
-  | "firebase"
-  | "git"
-  | "github"
-  | "vercel"
-  | "netlify"
-  | "figma"
-  | "html"
-  | "css"
-  | "redux"
-  | "docker"
-  | "awslambda";
 
 const techData = {
   typescript: {
