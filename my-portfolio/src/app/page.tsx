@@ -4,7 +4,7 @@ import { projects } from "../config/projects";
 import { profile } from "../config/profile";
 import { Technology } from "../types";
 import ProjectsCarousel from "../components/ProjectsCarousel";
-
+import ProjectCard from "../components/ProjectCard";
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8q p-5">
@@ -40,8 +40,18 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="my-12">
-        <h2 className="text-center text-2xl font-semibold mb-2">Projects</h2>
+      <section className="mb-12">
+        <h2 className="text-center text-2xl font-semibold mb-4">Projects </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <div key={project.id} className="flex flex-col">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
         <ProjectsCarousel projects={projects} />
       </section>
     

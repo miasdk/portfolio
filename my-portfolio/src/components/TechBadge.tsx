@@ -137,7 +137,7 @@ const techData = {
     color: "bg-amber-500 text-black dark:bg-amber-400 dark:text-gray-900",
     label: "AWS Lambda",
   },
-} satisfies Record<Technology, { icon: IconType; color: string; label: string }>;
+} satisfies Record<Technology, { icon: IconType; color?: string; label: string }>;
 
 interface TechBadgeProps {
   tech: Technology;

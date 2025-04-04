@@ -3,9 +3,9 @@ import { Project, Technology } from "../types/index";
 export const projects: Project[] = [
     {
         id: "project1",
-        title: "Project One",
-        description: "Description of project one.",
-        technologies: ["typescript", "react", "nextjs", "tailwindcss"],
+        title: "eCart - E-commerce Platform",
+        description: "A basic e-commerce platform built with Vite, React, and a custom Node.js/PostgreSQL backend. Includes shopping cart, product management, and Stripe integration. ",
+        technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
         date: "2023",
         links: {
             github: "https://github.com/yourname/portfolio",
@@ -13,7 +13,7 @@ export const projects: Project[] = [
         },
         image: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
-            isTeamProject: true,
+            isTeamProject: false,
         },
     },
     {

@@ -13,7 +13,7 @@ export default function ProjectsCarousel({ projects }: { projects: Project[] }) 
         <div className="relative px-4 py-8">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={10}
+                spaceBetween={20}
                 slidesPerView={1}
                 breakpoints={{
                     640: { slidesPerView: 1.5 },
