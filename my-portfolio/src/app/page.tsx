@@ -3,7 +3,7 @@ import TechBadge from "../components/TechBadge";
 import { projects } from "../config/projects";
 import { profile } from "../config/profile";
 import { Technology } from "../types";
-import ProjectCard from "../components/ProjectCard";
+import ProjectsCarousel from "../components/ProjectsCarousel";
 
 export default function Home() {
   return (
@@ -33,26 +33,18 @@ export default function Home() {
             href={profile.links.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-4 py-2 bg-white-600 text-black rounded-lg shadow-lg hover:bg-gray-700 transition-colors ml-4"
+            className="inline-block px-4 py-2 bg-white-600 text-black rounded-lg shadow-lg hover:bg-lightgray-700 transition-colors ml-4"
           >
             LinkedIn
           </a>
         </div>
       </header>
 
-      <section className="max-w-5xl mx-auto"> {/* Constrains maximum width */}
-  <h2 className="text-center text-2xl font-semibold mb-6">Projects</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"> {/* Reduced gap */}
-    {projects.map((project) => (
-      <div key={project.id} className="max-w-[350px] mx-auto w-full"> {/* Card container */}
-        <ProjectCard 
-          project={project} 
-          className="h-full" // Ensures consistent height
-        />
-      </div>
-    ))}
-  </div>
-</section>
+      <section className="my-12">
+        <h2 className="text-center text-2xl font-semibold mb-2">Projects</h2>
+        <ProjectsCarousel projects={projects} />
+      </section>
+    
     </main>
 
 
