@@ -21,7 +21,7 @@ export const projects: Project[] = [
         id: "project2",
         title: "Project Two",
         description: "Description of project two.",
-        technologies: ["javascript", "nextjs", "postgresql", "docker"],
+        technologies: [],
         date: "2023",
         links: {
             github: "https://github.com/yourname/portfolio",
@@ -38,10 +38,10 @@ export const projects: Project[] = [
         id: "project3",
         title: "Project Three",
         description: "Description of project three.",
-        technologies: ["typescript", "react", "mongodb", "docker"],
+        technologies: [],
         date: "2023",
         links: {
-            github: "",
+            github: "https://github.com/yourname/portfolio",
             demo: "https://yourportfolio.com"
         },
         image: "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
