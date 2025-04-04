@@ -161,9 +161,9 @@ export default function TechBadge({
   };
 
   const iconSizes = {
-    sm: "text-[0.8em]",
-    md: "text-[1em]",
-    lg: "text-[1.2em]",
+    sm: "text-[1.2em]",
+    md: "text-[1.4m]",
+    lg: "text-[1.5em]",
   };
 
   return (

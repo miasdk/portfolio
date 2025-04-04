@@ -71,6 +71,7 @@ export type Technology =
       linkedIn?: string;
       twitter?: string;
       website?: string;
+      resume?: string; // Optional
     };
     skills: Technology[];
     contact: {  
@@ -81,6 +82,7 @@ export type Technology =
       city?: string;
       country?: string;
     };
+  
   }
 
 

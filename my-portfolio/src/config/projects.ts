@@ -11,7 +11,7 @@ export const projects: Project[] = [
             github: "https://github.com/yourname/portfolio",
             demo: "https://yourportfolio.com"
         },
-        image: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
             isTeamProject: true,
         },
@@ -26,7 +26,7 @@ export const projects: Project[] = [
             github: "https://github.com/yourname/portfolio",
             demo: "https://yourportfolio.com"
         },
-        image: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1575&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
             isWIP: true,
             isOpenSource: true,
@@ -43,7 +43,7 @@ export const projects: Project[] = [
             github: "",
             demo: "https://yourportfolio.com"
         },
-        image: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
             isFeatured: true,
         },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
             github: "",
             demo: "https://yourportfolio.com"
         },
-        image: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
             isOpenSource: true,
         },
