@@ -1,9 +1,10 @@
 import { Project, Technology } from "../types/index";
+import project1 from "../public/images/project1.jpg";
 
 export const projects: Project[] = [
     {
         id: "project1",
-        title: "eCart - E-commerce Platform",
+        title: "eCart",
         description: "A basic e-commerce platform built with Vite, React, and a custom Node.js/PostgreSQL backend. Includes shopping cart, product management, and Stripe integration. ",
         technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
         date: "2023",
@@ -11,7 +12,7 @@ export const projects: Project[] = [
             github: "https://github.com/yourname/portfolio",
             demo: "https://yourportfolio.com"
         },
-        image: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: project1,
         meta: {
             isTeamProject: false,
         },
@@ -45,25 +46,8 @@ export const projects: Project[] = [
         },
         image: "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
-            isFeatured: true,
+            isWIP: true,
         },
         platforms: ["web", "desktop"]
     },
-    {
-        id: "project4",
-        title: "Project Four",
-        description: "Description of project four.",
-        technologies: ["typescript", "javascript", "docker", "awslambda"],
-        date: "2023",
-        links: {
-            github: "",
-            demo: "https://yourportfolio.com"
-        },
-        image: "https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        meta: {
-            isOpenSource: true,
-        },
-        platforms: ["web", "cli"]
-    },
-
 ]; 

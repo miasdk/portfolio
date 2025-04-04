@@ -7,7 +7,7 @@ import ProjectsCarousel from "../components/ProjectsCarousel";
 import ProjectCard from "../components/ProjectCard";
 export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-8q p-5">
+    <main className="container mx-auto px-4 py-8 p-5">
       <header className="text-center mb-10">
         <Image
           src={profile.image}
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mb-12">
+      <section className="mb-12 mt-5 px-10">
         <h2 className="text-center text-2xl font-semibold mb-4">Projects </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
@@ -50,11 +50,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <section>
-        <ProjectsCarousel projects={projects} />
-      </section>
-    
+  
     </main>
 
 
