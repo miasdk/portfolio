@@ -5,6 +5,7 @@ import { profile } from "../config/profile";
 import { Technology } from "../types";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 import ProjectCard from "../components/ProjectCard";
+
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 p-5">
@@ -40,20 +41,22 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mb-12 mt-5 px-10">
-        <h2 className="text-center text-2xl font-semibold mb-4">Projects </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <div key={project.id} className="flex flex-col">
+      <section className="mb-12 mt-5 px-4">
+        <div className="mx-auto max-w-screen-xl">
+        <div 
+          className="grid gap-6"
+          style={{
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))"
+          }}
+        >
+          {projects.map(project => (
+            <div key={project.id} className="max-w-[400px] w-full mx-auto">
               <ProjectCard project={project} />
             </div>
           ))}
         </div>
+        </div>
       </section>
-  
     </main>
-
-
-    
   );
 }

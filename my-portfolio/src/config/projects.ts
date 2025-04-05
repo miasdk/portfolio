@@ -14,6 +14,7 @@ export const projects: Project[] = [
         },
         image: project1,
         meta: {
+            isWIP: true,
             isTeamProject: false,
         },
     },
@@ -48,6 +49,7 @@ export const projects: Project[] = [
         meta: {
             isWIP: true,
         },
-        platforms: ["web", "desktop"]
+        platforms: ["web", "mobile"]
     },
+   
 ]; 

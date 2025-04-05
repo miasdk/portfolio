@@ -57,7 +57,7 @@ export type Technology =
     };
   
     // Platform Support 
-    platforms?: ("web" | "mobile" | "desktop" | "cli")[];
+    platforms?: ("web" | "mobile" | "cli")[];
 
   }
 

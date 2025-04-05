@@ -1,5 +1,5 @@
 import { profile } from "../config/profile";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaHeart } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
@@ -7,6 +7,10 @@ export default function Footer() {
         <footer className="bg-gray-100 text-gray-700 py-6">
             <div className="container mx-auto flex justify-between items-center px-4">
                 <div className="text-sm">
+                    <p>
+                        Made with <FaHeart className="inline text-red-500" /> by {profile.name}
+                    </p>
+                    
                     &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
                 </div>
                 <div className="flex space-x-4">

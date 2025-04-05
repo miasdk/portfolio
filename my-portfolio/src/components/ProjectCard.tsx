@@ -14,18 +14,6 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
         <article className={`group border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${className}`}>
             {project.image && (
                 <div className="relative h-48 w-full">
-                    {project.platforms && (
-                        <div className="absolute top-2 left-2 flex gap-2">
-                            {project.platforms.map((platform) => (
-                                <span
-                                    key={platform}
-                                    className="bg-gray-200 text-gray-800 text-xs font-semibold px-2 py-1 rounded-full"
-                                >
-                                    {platform.charAt(0).toUpperCase() + platform.slice(1)}
-                                </span>
-                            ))}
-                        </div>
-                    )}
                     <Image
                         src={project.image}
                         alt={`Screenshot of ${project.title}`}
@@ -93,8 +81,8 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                         )}
                     </div>
                 )}
-
-                    <p className="mt-4 text-sm text-gray-500"> 
+                <div className="flex justify-between items-center mt-4">
+                    <p className="text-sm text-gray-500"> 
                         {project.date}
                         {project.meta?.isOpenSource && (
                             <span className="ml-2 inline-flex items-center text-green-600">
@@ -109,6 +97,9 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                             </span>
                         )}
                     </p>
+                    <div>
+                    </div>
+                </div>
             </div>
         </article>
     );
