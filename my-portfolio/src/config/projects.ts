@@ -12,7 +12,7 @@ export const projects: Project[] = [
             github: "https://github.com/yourname/portfolio",
             demo: "https://yourportfolio.com"
         },
-        image: project1,
+        image: "https://images.unsplash.com/photo-1592503254549-d83d24a4dfab?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
             isWIP: true,
             isTeamProject: false,
@@ -20,15 +20,15 @@ export const projects: Project[] = [
     },
     {
         id: "project2",
-        title: "Project Two",
+        title: "Gig",
         description: "Description of project two.",
-        technologies: [],
+        technologies: ["python","postgresql", "firebase"],
         date: "2023",
         links: {
             github: "https://github.com/yourname/portfolio",
             demo: "https://yourportfolio.com"
         },
-        image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1575&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1528033978085-52f315289665?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         meta: {
             isWIP: true,
             isOpenSource: true,
@@ -39,7 +39,7 @@ export const projects: Project[] = [
         id: "project3",
         title: "Project Three",
         description: "Description of project three.",
-        technologies: [],
+        technologies: [ "typescript", "javascript", "react", "nextjs", "tailwindcss"],
         date: "2023",
         links: {
             github: "https://github.com/yourname/portfolio",
@@ -51,5 +51,23 @@ export const projects: Project[] = [
         },
         platforms: ["web", "mobile"]
     },
-   
+    {
+        id: "project4",
+        title: "Project Four",
+        description: "Description of project three.",
+        technologies: [],
+        date: "2023",
+        links: {
+            github: "https://github.com/yourname/portfolio",
+            demo: "https://yourportfolio.com"
+        },
+        image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        meta: {
+            isWIP: true,
+            isTeamProject: true,
+        },
+        platforms: ["web", "mobile"]
+    },
+
+    
 ]; 

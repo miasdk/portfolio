@@ -20,7 +20,11 @@ export type Technology =
   | "css"
   | "redux"
   | "docker"
-  | "awslambda";
+  | "awslambda"
+  | "python"
+  | "java"
+  | "supabase"
+  ;
 
   export interface Project {
     // Core Properties
@@ -84,5 +88,30 @@ export type Technology =
     };
   
   }
+
+  export interface ExperienceItem {
+    id: string; 
+    role: string;
+    company: string;
+    period: string; // e.g., "Jan 2020 - Present"
+    description: string[]; 
+    skills: Technology[]; // Technologies used
+    logo?: string; // Optional logo image
+    links?: {
+      companyWebsite?: string;
+      projectLink?: string;
+      caseStudy?: string;
+      github?: string;
+    }
+    location?: {
+      city?: string;
+      country?: string;
+    };
+    metrics?: {
+      value: string; // e.g., "20%"
+      label: string; // e.g., "Increased efficiency"
+    }[];
+  }
+
 
 

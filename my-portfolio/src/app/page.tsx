@@ -2,14 +2,16 @@ import Image from "next/image";
 import TechBadge from "../components/TechBadge";
 import { projects } from "../config/projects";
 import { profile } from "../config/profile";
+import { experience } from "../config/experience";
 import { Technology } from "../types";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 import ProjectCard from "../components/ProjectCard";
+import ExperienceCard from "../components/ExperienceCard";
 
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 p-5">
-      <header className="text-center mb-10">
+      <header className="text-center mb-12">
         <Image
           src={profile.image}
           alt={`${profile.name}'s profile picture`}
@@ -40,13 +42,15 @@ export default function Home() {
           </a>
         </div>
       </header>
-
-      <section className="mb-12 mt-5 px-4">
+      
+     
+      <section className="mb-12 px-4">
+        <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
         <div className="mx-auto max-w-screen-xl">
         <div 
           className="grid gap-6"
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))"
+            gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
           }}
         >
           {projects.map(project => (
@@ -55,6 +59,15 @@ export default function Home() {
             </div>
           ))}
         </div>
+        </div>
+      </section>
+
+      <section className="mb-12 px-4">
+        <h2 className="text-2xl font-bold mb-6 text-center">Experience</h2>
+        <div className="grid gap-6 max-w-screen-xl mx-auto">
+          {experience.map((exp) => (
+            <ExperienceCard key={exp.id} experience={exp} />
+          ))}
         </div>
       </section>
     </main>

@@ -22,6 +22,8 @@ import {
   SiRedux,
   SiDocker,
   SiAwslambda,
+  SiPython,
+  SiSupabase,
 } from 'react-icons/si';
 import { Technology } from '../types';
 
@@ -29,113 +31,118 @@ import { Technology } from '../types';
 const techData = {
   typescript: {
     icon: SiTypescript,
-    color: "bg-blue-600 text-white dark:bg-blue-800 dark:text-blue-100",
+    color: "bg-blue-500 text-white dark:bg-[#3178c6] dark:text-white",
     label: "TypeScript",
   },
   javascript: {
     icon: SiJavascript,
-    color: "bg-yellow-400 text-gray-800 dark:bg-yellow-600 dark:text-white",
+    color: "bg-[#f7df1e] text-black dark:bg-[#f7df1e] dark:text-black",
     label: "JavaScript",
   },
   react: {
     icon: SiReact,
-    color: "bg-cyan-500 text-white dark:bg-cyan-700 dark:text-cyan-100",
+    color: "bg-[#61dafb] text-black dark:bg-[#282c34] dark:text-[#61dafb]",
     label: "React",
   },
   nextjs: {
     icon: SiNextdotjs,
-    color: "bg-black text-white dark:bg-white dark:text-black",
+    color: "bg-black text-white dark:bg-black dark:text-white",
     label: "Next.js",
   },
   tailwindcss: {
     icon: SiTailwindcss,
-    color: "bg-sky-500 text-white dark:bg-sky-700 dark:text-sky-100",
+    color: "bg-[#06b6d4] text-white dark:bg-[#0f172a] dark:text-[#38bdf8]",
     label: "Tailwind CSS",
   },
   graphql: {
     icon: SiGraphql,
-    color: "bg-pink-600 text-white dark:bg-pink-800 dark:text-pink-100",
+    color: "bg-[#e10098] text-white dark:bg-[#e10098] dark:text-white",
     label: "GraphQL",
   },
   prisma: {
     icon: SiPrisma,
-    color: "bg-gray-700 text-white dark:bg-gray-500 dark:text-gray-100",
+    color: "bg-[#2d3748] text-white dark:bg-[#2d3748] dark:text-white",
     label: "Prisma",
   },
   nodejs: {
     icon: SiNodedotjs,
-    color: "bg-green-600 text-white dark:bg-green-800 dark:text-green-100",
+    color: "bg-[#339933] text-white dark:bg-[#303030] dark:text-[#8cc84b]",
     label: "Node.js",
   },
   express: {
     icon: SiExpress,
-    color: "bg-gray-800 text-white dark:bg-gray-600 dark:text-gray-100",
+    color: "bg-[#000000] text-white dark:bg-[#000000] dark:text-white",
     label: "Express.js",
   },
   postgresql: {
     icon: SiPostgresql,
-    color: "bg-blue-700 text-white dark:bg-blue-900 dark:text-blue-100",
+    color: "bg-[#336791] text-white dark:bg-[#336791] dark:text-white",
     label: "PostgreSQL",
   },
   mongodb: {
     icon: SiMongodb,
-    color: "bg-green-500 text-white dark:bg-green-700 dark:text-green-100",
+    color: "bg-[#47a248] text-white dark:bg-[#001e2b] dark:text-[#00ed64]",
     label: "MongoDB",
   },
   firebase: {
     icon: SiFirebase,
-    color: "bg-amber-500 text-white dark:bg-amber-700 dark:text-amber-100",
+    color: "bg-[#ffca28] text-[#f57c00] dark:bg-[#f57c00] dark:text-[#ffca28]",
     label: "Firebase",
   },
   git: {
     icon: SiGit,
-    color: "bg-orange-600 text-white dark:bg-orange-800 dark:text-orange-100",
+    color: "bg-[#f05032] text-white dark:bg-[#f05032] dark:text-white",
     label: "Git",
   },
   github: {
     icon: SiGithub,
-    color: "bg-gray-900 text-white dark:bg-gray-700 dark:text-gray-100",
+    color: "bg-[#24292e] text-white dark:bg-[#161b22] dark:text-white",
     label: "GitHub",
   },
   vercel: {
     icon: SiVercel,
-    color: "bg-black text-white dark:bg-white dark:text-black",
+    color: "bg-black text-white dark:bg-black dark:text-white",
     label: "Vercel",
   },
   netlify: {
     icon: SiNetlify,
-    color: "bg-emerald-500 text-white dark:bg-emerald-700 dark:text-emerald-100",
+    color: "bg-[#00c7b7] text-white dark:bg-[#0e1e25] dark:text-[#00c7b7]",
     label: "Netlify",
   },
   figma: {
     icon: SiFigma,
-    color: "bg-orange-500 text-white dark:bg-orange-700 dark:text-orange-100",
+    color: "bg-[#f24e1e] text-white dark:bg-[#1e1e1e] dark:text-[#f24e1e]",
     label: "Figma",
   },
   html: {
     icon: SiHtml5,
-    color: "bg-orange-600 text-white dark:bg-orange-800 dark:text-orange-100",
+    color: "bg-[#e34f26] text-white dark:bg-[#e34f26] dark:text-white",
     label: "HTML5",
   },
   css: {
     icon: SiCss3,
-    color: "bg-blue-500 text-white dark:bg-blue-700 dark:text-blue-100",
+    color: "bg-[#1572b6] text-white dark:bg-[#1572b6] dark:text-white",
     label: "CSS3",
   },
   redux: {
     icon: SiRedux,
-    color: "bg-purple-600 text-white dark:bg-purple-800 dark:text-purple-100",
+    color: "bg-[#764abc] text-white dark:bg-[#764abc] dark:text-white",
     label: "Redux",
   },
   docker: {
     icon: SiDocker,
-    color: "bg-blue-500 text-white dark:bg-blue-700 dark:text-blue-100",
+    color: "bg-[#2496ed] text-white dark:bg-[#0b214a] dark:text-[#2496ed]",
     label: "Docker",
   },
   awslambda: {
     icon: SiAwslambda,
-    color: "bg-amber-500 text-black dark:bg-amber-400 dark:text-gray-900",
+    color: "bg-[#ff9900] text-black dark:bg-[#232f3e] dark:text-[#ff9900]",
     label: "AWS Lambda",
+  },
+  python: {
+    icon: SiPython,
+    color: "bg-[#3776ab] text-[#ffd43b] dark:bg-[#3776ab] dark:text-[#ffd43b]",
+    label: "Python",
   },
 } satisfies Record<Technology, { icon: IconType; color?: string; label: string }>;
 
@@ -143,6 +150,7 @@ interface TechBadgeProps {
   tech: Technology;
   size?: "sm" | "md" | "lg";
   showLabel?: boolean;
+  showbg?: boolean;
   className?: string;
 }
 
@@ -150,6 +158,7 @@ export default function TechBadge({
   tech,
   size = "md",
   showLabel = true,
+  showbg = true,
   className = "",
 }: TechBadgeProps) {
   const { icon: Icon, color, label } = techData[tech];
@@ -162,18 +171,26 @@ export default function TechBadge({
 
   const iconSizes = {
     sm: "text-[1.2em]",
-    md: "text-[1.4m]",
+    md: "text-[1.4em]",
     lg: "text-[1.5em]",
   };
 
+  // Base classes all badges will have
+  const baseClasses = `inline-flex items-center rounded-md font-medium transition-all ${sizeClasses[size]} ${className}`;
+  
+  // Conditional color classes based on showbg prop
+  const colorClasses = showbg 
+    ? color 
+    : "bg-transparent text-gray-700 dark:text-gray-300";
+
   return (
     <span
-      className={`inline-flex items-center rounded-full font-medium transition-all ${color} ${sizeClasses[size]} ${className}`}
+      className={`${baseClasses} ${colorClasses}`}
       role="img"
       aria-label={showLabel ? undefined : `${label} icon`}
     >
       <Icon 
-        className={`flex-shrink-0 ${iconSizes[size]}`} 
+        className={`flex-shrink-0 ${iconSizes[size]} ${!showbg ? "text-gray-800 dark:text-gray-300" : ""}`} 
         aria-hidden="true"
       />
       {showLabel && <span>{label}</span>}
