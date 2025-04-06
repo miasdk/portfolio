@@ -93,7 +93,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-6 text-center">Contact Me</h2>
         <div className="max-w-screen-xl mx-auto">
         <p className="text-center mb-4 text-gray-700">
-          I would love to hear from you! I am always looking for new opportunities and collaborations.
+          I would love to hear from you! Please contact me using the form below! 
         </p>
         <ContactForm />
         </div>
