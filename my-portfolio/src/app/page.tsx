@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TechBadge from "../components/TechBadge";
+import Link from "next/link";
 import { projects } from "../config/projects";
 import { profile } from "../config/profile";
 import { experience } from "../config/experience";
@@ -7,6 +8,7 @@ import { Technology } from "../types";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "../components/ExperienceCard";
+import ContactForm from "../components/ContactForm";
 
 export default function Home() {
   return (
@@ -22,7 +24,13 @@ export default function Home() {
         <h1 className="text-3xl font-bold">{profile.name}</h1>
         <p className="text-lg text-gray-600">{profile.title}</p>
         <p className="mt-4 text-gray-700 max-w-xl mx-auto">{profile.description}</p>
-  
+        <div className="mt-6">
+          <div className="flex flex-wrap justify-center">
+            {profile.skills.map((tech: Technology) => (
+              <TechBadge key={tech} tech={tech} size="xl" showLabel={false} showbg={false} className="hover:drop-shadow-xl hover:scale-110 transition-transform"/>
+            ))}
+          </div>
+        </div>
         <div className="mt-6">
           <a
             href={profile.links.resume}
@@ -42,15 +50,15 @@ export default function Home() {
           </a>
         </div>
       </header>
-      
      
-      <section className="mb-12 px-4">
+      <section id="projects" className="mb-12 px-4">
         <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
         <div className="mx-auto max-w-screen-xl">
         <div 
           className="grid gap-6"
           style={{
             gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+            alignItems: "stretch",
           }}
         >
           {projects.map(project => (
@@ -62,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-12 px-4">
+      <section id="experience" className="mb-12 px-4">
         <h2 className="text-2xl font-bold mb-6 text-center">Experience</h2>
         <div className="grid gap-6 max-w-screen-xl mx-auto">
           {experience.map((exp) => (
@@ -70,6 +78,22 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      
+      <section id="contact" className="mb-12 px-4">
+        <h2 className="text-2xl font-bold mb-6 text-center">Contact Me</h2>
+        <div className="max-w-screen-xl mx-auto">
+        <p className="text-center mb-4 text-gray-700">
+          I would love to hear from you! I am always looking for new opportunities and collaborations.
+        </p>
+        <ContactForm />
+        </div>
+      </section>
+
+      
+     
+
+      
     </main>
   );
 }

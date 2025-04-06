@@ -1,3 +1,5 @@
+'use client';
+import { useState } from "react";
 import { IconType } from 'react-icons';
 import {
   SiTypescript, 
@@ -148,7 +150,7 @@ const techData = {
 
 interface TechBadgeProps {
   tech: Technology;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl" | "xxl";
   showLabel?: boolean;
   showbg?: boolean;
   className?: string;
@@ -165,14 +167,18 @@ export default function TechBadge({
   
   const sizeClasses = {
     sm: "text-xs px-2 py-1 gap-1",
-    md: "text-sm px-3 py-1.5 gap-1.5", 
+    md: "text-sm px-3 py-1.5 gap-1.5",
     lg: "text-base px-4 py-2 gap-2",
+    xl: "text-lg px-5 py-2.5 gap-2.5", // New xl size
+    xxl: "text-xl px-2 py-3 gap-1" // New xxl size
   };
 
   const iconSizes = {
     sm: "text-[1.2em]",
     md: "text-[1.4em]",
     lg: "text-[1.5em]",
+    xl: "text-[1.6em]",
+    xxl: "text-[2.5em]",
   };
 
   // Base classes all badges will have

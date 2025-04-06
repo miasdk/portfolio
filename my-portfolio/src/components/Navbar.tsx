@@ -5,7 +5,9 @@ export default function Navbar() {
         <nav className="bg-white dark:bg-gray-800 shadow">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="text-xl font-bold text-gray-900 dark:text-white">
+            <a href="/" >
             Mia E. Tapia
+            </a>
             </div>
             <ul className="flex space-x-4">
             <li>
@@ -18,10 +20,18 @@ export default function Navbar() {
             </li>
             <li>
                 <a
-                href="#about"
+                href="/about"
                 className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400"
                 >
                 About
+                </a>
+            </li>
+            <li>
+                <a
+                href="#experience"
+                className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400"
+                >
+                Experience
                 </a>
             </li>
             <li>

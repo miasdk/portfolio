@@ -20,8 +20,8 @@ export const projects: Project[] = [
     },
     {
         id: "project2",
-        title: "Gig",
-        description: "Description of project two.",
+        title: "Project Two",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         technologies: ["python","postgresql", "firebase"],
         date: "2023",
         links: {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     {
         id: "project3",
         title: "Project Three",
-        description: "Description of project three.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         technologies: [ "typescript", "javascript", "react", "nextjs", "tailwindcss"],
         date: "2023",
         links: {
@@ -54,8 +54,22 @@ export const projects: Project[] = [
     {
         id: "project4",
         title: "Project Four",
-        description: "Description of project three.",
-        technologies: [],
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        technologies: [
+            "typescript",
+            "javascript",
+            "react",
+            "nextjs",
+            "tailwindcss",
+            "graphql",
+            "prisma",
+            "nodejs",
+            "express",
+            "postgresql",
+            "mongodb",
+            "firebase",
+            "git",
+        ],
         date: "2023",
         links: {
             github: "https://github.com/yourname/portfolio",

@@ -11,9 +11,9 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, className = " "}: ProjectCardProps) {
     return (
-        <article className={`group border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${className}`}>
+        <article className={`group h-full flex flex-col border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 ${className}`}>
             {project.image && (
-                <div className="relative h-48 w-full">
+                <div className="relative h-48 w-full flex-shrink-0">
                     <Image
                         src={project.image}
                         alt={`Screenshot of ${project.title}`}
@@ -25,7 +25,8 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                 </div>
             )}
 
-            <div className="p-6">
+            {/* Content container with flex-col */}
+            <div className="p-6 flex-1 flex flex-col">
                 <div className="flex justify-between items-start gap-2">
                     <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                         <Link href={project.links?.demo || "#"} target="_blank" rel="noopener noreferrer">
@@ -39,7 +40,8 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                     )}
                 </div>
 
-                <p className="mt-2 text-gray-600">{project.description}</p>
+                {/* Growable description area */}
+                <p className="mt-2 text-gray-600 flex-grow">{project.description}</p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
@@ -53,51 +55,51 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                     ))}
                 </div>
 
-                {project.links && (
-                    <div className="mt-4 flex flex-wrap gap-3">
-                        {project.links.github && (
-                            <Link 
-                                href={project.links.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center text-sm font-medium hover:underline"
-                                aria-label={`View ${project.title} on GitHub`}
-                            >
-                                <FaGithub className="mr-1" />
-                                GitHub
-                            </Link>
-                        )}
-                        {project.links.demo && (
-                            <Link 
-                                href={project.links.demo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center text-sm font-medium hover:underline"
-                                aria-label={`View ${project.title} live demo`}
-                            >
-                                <FaExternalLinkAlt className="mr-1" />
-                                 Demo
-                            </Link>
-                        )}
-                    </div>
-                )}
-                <div className="flex justify-between items-center mt-4">
-                    <p className="text-sm text-gray-500"> 
-                        {project.date}
-                        {project.meta?.isOpenSource && (
-                            <span className="ml-2 inline-flex items-center text-green-600">
-                                
-                                Open Source
-                            </span>
-
-                        )}
-                        {project.meta?.isTeamProject && (
-                            <span className="ml-2 inline-flex items-center text-blue-600">
-                                Team Project
-                            </span>
-                        )}
-                    </p>
-                    <div>
+                {/* Bottom-aligned links */}
+                <div className="mt-4">
+                    {project.links && (
+                        <div className="flex flex-wrap gap-3">
+                            {project.links.github && (
+                                <Link 
+                                    href={project.links.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-sm font-medium hover:underline"
+                                    aria-label={`View ${project.title} on GitHub`}
+                                >
+                                    <FaGithub className="mr-1" />
+                                    GitHub
+                                </Link>
+                            )}
+                            {project.links.demo && (
+                                <Link 
+                                    href={project.links.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-sm font-medium hover:underline"
+                                    aria-label={`View ${project.title} live demo`}
+                                >
+                                    <FaExternalLinkAlt className="mr-1" />
+                                    Demo
+                                </Link>
+                            )}
+                        </div>
+                    )}
+                    
+                    <div className="flex justify-between items-center mt-4">
+                        <p className="text-sm text-gray-500"> 
+                            {project.date}
+                            {project.meta?.isOpenSource && (
+                                <span className="ml-2 inline-flex items-center text-green-600">
+                                    Open Source
+                                </span>
+                            )}
+                            {project.meta?.isTeamProject && (
+                                <span className="ml-2 inline-flex items-center text-blue-600">
+                                    Team Project
+                                </span>
+                            )}
+                        </p>
                     </div>
                 </div>
             </div>
