@@ -97,6 +97,11 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                                     Team Project
                                 </span>
                             )}
+                            {project.meta?.isAI && (
+                                <span className="ml-2 inline-flex items-center text-purple-600">
+                                    ✨ New AI Skills
+                                </span>
+                            )}
                         </p>
                     </div>
                 </div>

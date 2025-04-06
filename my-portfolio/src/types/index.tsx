@@ -57,6 +57,8 @@ export type Technology =
       isWIP?: boolean; // "Work in progress" badge
       isOpenSource?: boolean; // Shows GitHub prominence
       isTeamProject?: boolean; // Team collaboration flag
+      isAI?: boolean; // AI/ML related
+      isGame?: boolean; // Game development
     };
   
     // Platform Support 

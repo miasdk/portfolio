@@ -16,6 +16,7 @@ export const projects: Project[] = [
         meta: {
             isWIP: true,
             isTeamProject: false,
+            isAI: true,
         },
     },
     {
