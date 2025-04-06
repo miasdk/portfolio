@@ -10,7 +10,7 @@ export default function Navbar() {
         <nav className="bg-white shadow">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="text-xl font-bold text-gray-900">
-                    <Link href="/">My Portfolio</Link>
+                    <Link href="/">Mia E. Tapia</Link>
                 </div>
 
                 <ul className="hidden md:flex space-x-4">
