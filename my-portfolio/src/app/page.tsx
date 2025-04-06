@@ -15,7 +15,7 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8 p-5">
       <header className="text-center mb-12">
         <Image
-          src={profile.image}
+          src={profile.image || "/default-profile.png"}
           alt={`${profile.name}'s profile picture`}
           width={150}
           height={150}
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="mt-6">
           <a
-            href={profile.links.resume}
+            href={profile.links?.resume || "#"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-4 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-gray-900 transition-colors"
@@ -41,7 +41,7 @@ export default function Home() {
             Resume
           </a>
           <a
-            href={profile.links.linkedIn}
+            href={profile.links?.linkedIn || "#"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-4 py-2 bg-white-600 text-black rounded-lg shadow-lg hover:bg-lightgray-700 transition-colors ml-4"
