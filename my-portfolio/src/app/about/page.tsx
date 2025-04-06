@@ -65,7 +65,7 @@ export default function AboutPage() {
       <div className="mt-auto bg-gradient-to-r from-blue-50/50 to-purple-50/50 dark:from-gray-800 dark:to-gray-800 rounded-xl p-6 transition-colors">
         <div className="max-w-3xl mx-auto space-y-4">
           <h2 className="text-lg font-medium text-gray-700 dark:text-gray-300 text-center">
-            Coding Activity
+             Coding Activity
           </h2>
           <div className="relative rounded-lg overflow-hidden border border-gray-100 dark:border-gray-700">
             <Image
