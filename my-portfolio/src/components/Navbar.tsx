@@ -60,7 +60,7 @@ function MobileNavLink({ href, children, onClick }: { href: string; children: Re
         <li>
             <Link
                 href={href}
-                className="block text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 py-2 transition-colors"
+                className="block text-gray-900 hover:text-blue-500 py-2 transition-colors"
                 onClick={onClick}
             >
                 {children}

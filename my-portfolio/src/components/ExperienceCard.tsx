@@ -44,22 +44,22 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
 
                 <div className="flex justify-between items-start w-full">
                     <div>
-                        <h3 className="font-semibold text-gray-900 dark:text-white text-lg">
+                        <h3 className="font-semibold text-gray-900 text-lg">
                             {role}
                         </h3>
                         <div className="flex flex-wrap items-center gap-1.5 mt-1">
-                            <p className="text-gray-700 dark:text-gray-300 text-sm font-medium">
+                            <p className="text-gray-700 text-sm font-medium">
                                 {company}
                             </p>
                         </div>
                     </div>
                     <div>
                     <div className="flex flex-wrap items-center gap-1.5 mt-1">
-                            <p className="text-gray-700 dark:text-gray-300 text-sm font-medium">
+                            <p className="text-gray-700 text-sm font-medium">
                                 {location.city}, {location.country}
                             </p>
-                            <span className="text-gray-400 dark:text-gray-500">•</span>
-                            <p className="text-gray-500 dark:text-gray-400 text-sm">
+                            <span className="text-gray-400">•</span>
+                            <p className="text-gray-500 text-sm">
                                 {period}
                             </p>
                         </div>
@@ -70,9 +70,9 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                 {description.map((item, i) => (
                     <li 
                         key={i}
-                        className="text-gray-700 dark:text-gray-300 text-sm flex items-start"
+                        className="text-gray-700 text-sm flex items-start"
                     >
-                        <span className="mr-2 mt-0.5 text-gray-400 dark:text-gray-500">•</span>
+                        <span className="mr-2 mt-0.5 text-gray-400">•</span>
                         {item}
                     </li>
                 ))}
@@ -83,12 +83,12 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                     {metrics.map((metric, i) => (
                         <div 
                             key={i}
-                            className="p-2 text-center border border-gray-100 dark:border-gray-700 rounded"
+                            className="p-2 text-center border border-gray-100 rounded"
                         >
-                            <p className="text-lg font-medium text-gray-900 dark:text-white">
+                            <p className="text-lg font-medium text-gray-900">
                                 {metric.value}
                             </p>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                            <p className="text-xs text-gray-500  mt-1">
                                 {metric.label}
                             </p>
                         </div>
@@ -96,8 +96,8 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                 </div>
             )}
 
-            <div className="pt-4 border-t border-gray-100 dark:border-gray-700">
-                <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+            <div className="pt-4 border-t border-gray-100">
+                <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                     Technologies Used
                 </h4>
                 <div className="flex flex-wrap gap-2">

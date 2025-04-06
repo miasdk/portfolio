@@ -201,7 +201,7 @@ export default function TechBadge({
       aria-label={showLabel ? undefined : `${label} icon`}
     >
       <Icon 
-        className={`flex-shrink-0 ${iconSizes[size]} ${!showbg ? "text-gray-800 dark:text-gray-300" : ""}`} 
+        className={`flex-shrink-0 ${iconSizes[size]} ${!showbg ? "text-gray-800" : ""}`} 
         aria-hidden="true"
       />
       {showLabel && <span>{label}</span>}
