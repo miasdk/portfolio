@@ -25,7 +25,6 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                 </div>
             )}
 
-            {/* Content container with flex-col */}
             <div className="p-6 flex-1 flex flex-col">
                 <div className="flex justify-between items-start gap-2">
                     <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
@@ -55,7 +54,6 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                     ))}
                 </div>
 
-                {/* Bottom-aligned links */}
                 <div className="mt-4">
                     {project.links && (
                         <div className="flex flex-wrap gap-3">
