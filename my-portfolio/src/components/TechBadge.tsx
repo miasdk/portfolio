@@ -192,7 +192,7 @@ export default function TechBadge({
   // Conditional color classes based on showbg prop
   const colorClasses = showbg 
     ? color 
-    : "bg-transparent text-gray-700 dark:text-gray-300";
+    : "bg-transparent text-gray-700";
 
   return (
     <span

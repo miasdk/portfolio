@@ -7,9 +7,9 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white dark:bg-gray-800 shadow">
+        <nav className="bg-white shadow">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-                <div className="text-xl font-bold text-gray-900 dark:text-white">
+                <div className="text-xl font-bold text-gray-900">
                     <Link href="/">My Portfolio</Link>
                 </div>
 
@@ -22,7 +22,7 @@ export default function Navbar() {
 
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="md:hidden text-gray-900 dark:text-white"
+                    className="md:hidden text-gray-900"
                 >
                     {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
                 </button>
@@ -46,7 +46,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
         <li>
             <Link
                 href={href}
-                className="text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-900 hover:text-blue-500 transition-colors"
             >
                 {children}
             </Link>

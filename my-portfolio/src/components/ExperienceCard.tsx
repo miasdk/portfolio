@@ -27,7 +27,7 @@ interface ExperienceCardProps {
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
     const { role, company, period, logo, description, skills, metrics, location } = experience;
     return ( 
-        <article className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-sm transition-all">
+        <article className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-sm transition-all">
             <header className="flex items-start gap-4 mb-5">
                 {logo && (
                     <div className="mt-1 flex-shrink-0">
