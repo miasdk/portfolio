@@ -44,7 +44,7 @@ export default function Home() {
             href={profile.links?.linkedIn || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-4 py-2 bg-white-600 text-black rounded-lg shadow-lg hover:bg-lightgray-700 transition-colors ml-4"
+            className="inline-block px-4 py-2 bg-white-600 border-solid text-black rounded-lg shadow-lg hover:bg-lightgray-700 transition-colors ml-4"
           >
             LinkedIn
           </a>

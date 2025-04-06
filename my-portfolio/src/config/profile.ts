@@ -15,7 +15,7 @@ export const profile: Profile = {
         "typescript",
         "react",
         "nextjs",
-        "firebase",
+        "supabase",
     ] as Technology[],
     contact: {
         email: "miaelenatapia@gmail.com",

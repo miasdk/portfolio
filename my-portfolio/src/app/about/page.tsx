@@ -65,7 +65,7 @@ export default function AboutPage() {
       </div>
 
         <div className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-lg font-medium text-gray-700 text-center">
+          <h2 className="text-lg font-med text-gray-700 text-center uppercase tracking-wider">
             Coding Activity
           </h2>
           <div className="relative rounded-lg overflow-hidden">
