@@ -15,8 +15,12 @@ interface ExperienceCardProps {
         period: string;
         logo?: string;
         description: string[];
-        skills: string;
+        skills: string[];
         metrics?: Mertric[];
+        location: {
+            city: string;
+            country: string;
+        };
     }
 }
 

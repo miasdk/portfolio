@@ -74,7 +74,16 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-6 text-center">Experience</h2>
         <div className="grid gap-6 max-w-screen-xl mx-auto">
           {experience.map((exp) => (
-            <ExperienceCard key={exp.id} experience={exp} />
+            <ExperienceCard
+              key={exp.id}
+              experience={{
+                ...exp,
+                location: {
+                  city: exp.location?.city || "Unknown",
+                  country: exp.location?.country || "Unknown",
+                },
+              }}
+            />
           ))}
         </div>
       </section>

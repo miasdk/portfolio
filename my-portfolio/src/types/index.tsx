@@ -22,7 +22,6 @@ export type Technology =
   | "docker"
   | "awslambda"
   | "python"
-  | "java"
   | "supabase"
   ;
 
@@ -65,11 +64,13 @@ export type Technology =
 
   }
 
+  import { StaticImageData } from "next/image";
+  
   export interface Profile {
-    name: string;
-    title: string;
-    description: string;
-    image?: string;
+      name: string;
+      title: string;
+      description: string;
+      image?: string | StaticImageData;
     links?: {
       github?: string;
       linkedIn?: string;

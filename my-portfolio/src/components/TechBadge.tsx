@@ -146,6 +146,11 @@ const techData = {
     color: "bg-[#3776ab] text-[#ffd43b] dark:bg-[#3776ab] dark:text-[#ffd43b]",
     label: "Python",
   },
+  supabase: {
+    icon: SiSupabase,
+    color: "bg-[#3ecf8e] text-white dark:bg-[#3ecf8e] dark:text-white",
+    label: "Supabase",
+  },
 } satisfies Record<Technology, { icon: IconType; color?: string; label: string }>;
 
 interface TechBadgeProps {
