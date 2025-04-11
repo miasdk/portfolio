@@ -39,7 +39,6 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                     )}
                 </div>
 
-                {/* Growable description area */}
                 <p className="mt-2 text-gray-600 flex-grow">{project.description}</p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -49,6 +48,7 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                             tech={tech}
                             size="sm"
                             showLabel={true}
+                            showbg={true}
                             className="transition-opacity hover:opacity-80"
                         />
                     ))}
