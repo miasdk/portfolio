@@ -35,13 +35,13 @@ type ColorScheme = 'brand' | 'mono';
 // Monochromatic color mapping for different tech categories
 const monoColorScheme = {
   // Languages & Core Technologies
-  primary: "bg-slate-800 text-slate-100",
+  primary: "bg-slate-100 text-slate-800", // Was: bg-slate-800 text-slate-100
   // Frontend & UI
-  frontend: "bg-slate-700 text-slate-100",
+  frontend: "bg-slate-200 text-slate-800", // Was: bg-slate-700 text-slate-100
   // Backend & Database
-  backend: "bg-slate-700 text-slate-100",
+  backend: "bg-slate-200 text-slate-800",
   // Infrastructure & DevOps
-  infra: "bg-slate-700 text-slate-100",
+  infra: "bg-slate-200 text-slate-800",
 };
 
 // Technology category mapping for monochromatic scheme
