@@ -82,7 +82,7 @@ export default function ContactForm() {
                     onChange={(e) => setForm({...form, message: e.target.value})}
                     required
                     rows={5}
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border  rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
             </div>
 

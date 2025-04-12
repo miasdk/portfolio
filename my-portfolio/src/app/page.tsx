@@ -9,6 +9,7 @@ import ProjectsCarousel from "../components/ProjectsCarousel";
 import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "../components/ExperienceCard";
 import ContactForm from "../components/ContactForm";
+import ColorSchemeToggle from "../components/TechBadge";
 
 export default function Home() {
   return (
