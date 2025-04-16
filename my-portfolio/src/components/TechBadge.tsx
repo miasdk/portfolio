@@ -30,21 +30,36 @@ import {
 import { Technology } from '../types';
 
 // Define color scheme types for toggle functionality
-type ColorScheme = 'brand' | 'mono';
+type ColorScheme = 'brand' | 'mono' | 'minimal';
 
-// Monochromatic color mapping for different tech categories
+// Notion-inspired monochromatic color mapping for different tech categories
 const monoColorScheme = {
   // Languages & Core Technologies
-  primary: "bg-slate-100 text-slate-800", // Was: bg-slate-800 text-slate-100
+  primary: "bg-gray-100 text-gray-800 border border-gray-200 shadow-sm",
   // Frontend & UI
-  frontend: "bg-slate-200 text-slate-800", // Was: bg-slate-700 text-slate-100
+  frontend: "bg-gray-50 text-gray-800 border border-gray-200 shadow-sm",
   // Backend & Database
-  backend: "bg-slate-200 text-slate-800",
+  backend: "bg-white text-gray-800 border border-gray-200 shadow-sm",
   // Infrastructure & DevOps
-  infra: "bg-slate-200 text-slate-800",
+  infra: "bg-gray-100 text-gray-700 border border-gray-200 shadow-sm",
 };
 
-// Technology category mapping for monochromatic scheme
+// Modern minimalist color scheme for tech categories
+const minimalColorScheme = {
+  // Languages & Core Technologies
+  primary: "bg-indigo-50 text-indigo-900 border border-indigo-200",
+  
+  // Frontend & UI
+  frontend: "bg-blue-50 text-blue-900 border border-blue-200",
+  
+  // Backend & Database
+  backend: "bg-emerald-50 text-emerald-900 border border-emerald-200",
+  
+  // Infrastructure & DevOps
+  infra: "bg-amber-50 text-amber-900 border border-amber-200",
+};
+
+// Technology category mapping for monochromatic and minimal schemes
 const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   typescript: "primary",
   javascript: "primary",
@@ -211,14 +226,18 @@ export default function TechBadge({
   showLabel = true,
   showbg = true,
   className = "",
-  colorScheme = 'mono', // Default to monochromatic scheme
+  colorScheme = 'mono', // Default to minimal scheme
 }: TechBadgeProps) {
   const { icon: Icon, label } = brandTechData[tech];
   
   // Determine which color scheme to use
-  const color = colorScheme === 'brand' 
-    ? brandTechData[tech].color 
-    : monoColorScheme[techCategories[tech]];
+  let color = brandTechData[tech].color; // Default to brand color
+  
+  if (colorScheme === 'mono') {
+    color = monoColorScheme[techCategories[tech]];
+  } else if (colorScheme === 'minimal') {
+    color = minimalColorScheme[techCategories[tech]];
+  }
   
   const sizeClasses = {
     sm: "text-xs px-2 py-1 gap-1",
@@ -236,22 +255,37 @@ export default function TechBadge({
     xxl: "text-[2.5em]",
   };
 
+  // Rounded styles based on color scheme
+  const roundedStyles = colorScheme === 'mono' 
+    ? "rounded-lg" // More rounded for Notion-like feel
+    : "rounded-md";
+
   // Base classes all badges will have
-  const baseClasses = `inline-flex items-center rounded-md font-medium transition-all ${sizeClasses[size]} ${className}`;
+  const baseClasses = `inline-flex items-center font-medium transition-all ${roundedStyles} ${sizeClasses[size]} ${className}`;
   
   // Conditional color classes based on showbg prop
   const colorClasses = showbg 
     ? color 
     : "bg-transparent text-gray-700";
 
-  // Icon color class - if monochrome and no background
-  const iconColorClass = !showbg && colorScheme === 'mono' 
-    ? "text-slate-700" 
+  // Icon color class
+  let iconColorClass = "";
+  if (!showbg) {
+    if (colorScheme === 'mono') {
+      iconColorClass = "text-gray-600"; // Notion-like icon color
+    } else if (colorScheme === 'minimal') {
+      iconColorClass = "text-slate-700";
+    }
+  }
+
+  // Add hover effect for mono scheme
+  const hoverEffect = colorScheme === 'mono' 
+    ? "hover:bg-gray-200 hover:border-gray-300 transition-colors" 
     : "";
 
   return (
     <span
-      className={`${baseClasses} ${colorClasses}`}
+      className={`${baseClasses} ${colorClasses} ${hoverEffect}`}
       role="img"
       aria-label={showLabel ? undefined : `${label} icon`}
     >
@@ -292,11 +326,21 @@ export function ColorSchemeToggle({
         onClick={() => onChange('mono')}
         className={`px-3 py-1 rounded text-sm font-medium ${
           currentScheme === 'mono' 
-            ? 'bg-slate-800 text-white' 
+            ? 'bg-gray-800 text-white' 
             : 'bg-gray-200 text-gray-700'
         }`}
       >
-        Monochrome
+        Notion Style
+      </button>
+      <button
+        onClick={() => onChange('minimal')}
+        className={`px-3 py-1 rounded text-sm font-medium ${
+          currentScheme === 'minimal' 
+            ? 'bg-gradient-to-r from-indigo-500 to-emerald-500 text-white' 
+            : 'bg-gray-200 text-gray-700'
+        }`}
+      >
+        Minimal
       </button>
     </div>
   );
@@ -304,7 +348,7 @@ export function ColorSchemeToggle({
 
 // Example component showing usage of both the TechBadge and ColorSchemeToggle
 export function TechBadgeShowcase() {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('mono');
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('minimal');
   
   const technologies: Technology[] = [
     'typescript', 'react', 'nextjs', 'tailwindcss', 
