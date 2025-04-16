@@ -25,7 +25,7 @@ export default function ProjectCard({ project, className = " "}: ProjectCardProp
                 </div>
             )}
 
-            <div className="p-6 flex-1 flex flex-col">
+            <div className="p-9 flex-1 flex flex-col">
                 <div className="flex justify-between items-start gap-2">
                     <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                         <Link href={project.links?.demo || "#"} target="_blank" rel="noopener noreferrer">
