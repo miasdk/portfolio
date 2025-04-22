@@ -29,8 +29,29 @@ import {
 } from 'react-icons/si';
 import { Technology } from '../types';
 
-// Define color scheme types for toggle functionality
+// ===================================
+// 1. TYPE DEFINITIONS
+// ===================================
 type ColorScheme = 'brand' | 'mono' | 'minimal';
+
+interface TechBadgeProps {
+  tech: Technology;
+  size?: "sm" | "md" | "lg" | "xl" | "xxl";
+  showLabel?: boolean;
+  showbg?: boolean;
+  className?: string;
+  colorScheme?: ColorScheme;
+}
+
+interface ColorSchemeToggleProps {
+  currentScheme: ColorScheme;
+  onChange: (scheme: ColorScheme) => void;
+  className?: string;
+}
+
+// ===================================
+// 2. COLOR SCHEMES DATA
+// ===================================
 
 // Notion-inspired monochromatic color mapping for different tech categories
 const monoColorScheme = {
@@ -48,22 +69,26 @@ const monoColorScheme = {
 const minimalColorScheme = {
   // Languages & Core Technologies
   primary: "bg-indigo-50 text-indigo-900 border border-indigo-200",
-  
   // Frontend & UI
   frontend: "bg-blue-50 text-blue-900 border border-blue-200",
-  
   // Backend & Database
   backend: "bg-emerald-50 text-emerald-900 border border-emerald-200",
-  
   // Infrastructure & DevOps
   infra: "bg-amber-50 text-amber-900 border border-amber-200",
 };
 
+// ===================================
+// 3. TECHNOLOGY DATA
+// ===================================
+
 // Technology category mapping for monochromatic and minimal schemes
 const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
+  // Primary Technologies (Languages)
   typescript: "primary",
   javascript: "primary",
   python: "primary",
+  
+  // Frontend Technologies
   html: "frontend",
   css: "frontend",
   react: "frontend",
@@ -71,6 +96,8 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   tailwindcss: "frontend",
   redux: "frontend",
   figma: "frontend",
+  
+  // Backend Technologies
   nodejs: "backend",
   express: "backend",
   graphql: "backend",
@@ -79,6 +106,8 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   mongodb: "backend",
   firebase: "backend",
   supabase: "backend",
+  
+  // Infrastructure Technologies
   git: "infra",
   github: "infra",
   vercel: "infra",
@@ -89,6 +118,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
 
 // Original brand color tech data
 const brandTechData = {
+  // Languages
   typescript: {
     icon: SiTypescript,
     color: "bg-blue-500 text-white",
@@ -98,6 +128,23 @@ const brandTechData = {
     icon: SiJavascript,
     color: "bg-[#f7df1e] text-black",
     label: "JavaScript",
+  },
+  python: {
+    icon: SiPython,
+    color: "bg-[#3776ab] text-[#ffd43b]",
+    label: "Python",
+  },
+  
+  // Frontend
+  html: {
+    icon: SiHtml5,
+    color: "bg-[#e34f26] text-white",
+    label: "HTML5",
+  },
+  css: {
+    icon: SiCss3,
+    color: "bg-[#1572b6] text-white",
+    label: "CSS3",
   },
   react: {
     icon: SiReact,
@@ -114,16 +161,18 @@ const brandTechData = {
     color: "bg-[#06b6d4] text-white",
     label: "Tailwind CSS",
   },
-  graphql: {
-    icon: SiGraphql,
-    color: "bg-[#e10098] text-white",
-    label: "GraphQL",
+  redux: {
+    icon: SiRedux,
+    color: "bg-[#764abc] text-white",
+    label: "Redux",
   },
-  prisma: {
-    icon: SiPrisma,
-    color: "bg-[#2d3748] text-white",
-    label: "Prisma",
+  figma: {
+    icon: SiFigma,
+    color: "bg-[#f24e1e] text-white",
+    label: "Figma",
   },
+  
+  // Backend & Data
   nodejs: {
     icon: SiNodedotjs,
     color: "bg-[#339933] text-white",
@@ -133,6 +182,16 @@ const brandTechData = {
     icon: SiExpress,
     color: "bg-[#000000] text-white",
     label: "Express.js",
+  },
+  graphql: {
+    icon: SiGraphql,
+    color: "bg-[#e10098] text-white",
+    label: "GraphQL",
+  },
+  prisma: {
+    icon: SiPrisma,
+    color: "bg-[#2d3748] text-white",
+    label: "Prisma",
   },
   postgresql: {
     icon: SiPostgresql,
@@ -149,6 +208,13 @@ const brandTechData = {
     color: "bg-[#ffca28] text-[#f57c00]",
     label: "Firebase",
   },
+  supabase: {
+    icon: SiSupabase,
+    color: "bg-[#3ecf8e] text-white",
+    label: "Supabase",
+  },
+  
+  // Infrastructure
   git: {
     icon: SiGit,
     color: "bg-[#f05032] text-white",
@@ -169,26 +235,6 @@ const brandTechData = {
     color: "bg-[#00c7b7] text-white",
     label: "Netlify",
   },
-  figma: {
-    icon: SiFigma,
-    color: "bg-[#f24e1e] text-white",
-    label: "Figma",
-  },
-  html: {
-    icon: SiHtml5,
-    color: "bg-[#e34f26] text-white",
-    label: "HTML5",
-  },
-  css: {
-    icon: SiCss3,
-    color: "bg-[#1572b6] text-white",
-    label: "CSS3",
-  },
-  redux: {
-    icon: SiRedux,
-    color: "bg-[#764abc] text-white",
-    label: "Redux",
-  },
   docker: {
     icon: SiDocker,
     color: "bg-[#2496ed] text-white",
@@ -199,34 +245,42 @@ const brandTechData = {
     color: "bg-[#ff9900] text-black",
     label: "AWS Lambda",
   },
-  python: {
-    icon: SiPython,
-    color: "bg-[#3776ab] text-[#ffd43b]",
-    label: "Python",
-  },
-  supabase: {
-    icon: SiSupabase,
-    color: "bg-[#3ecf8e] text-white",
-    label: "Supabase",
-  },
 } satisfies Record<Technology, { icon: IconType; color?: string; label: string }>;
 
-interface TechBadgeProps {
-  tech: Technology;
-  size?: "sm" | "md" | "lg" | "xl" | "xxl";
-  showLabel?: boolean;
-  showbg?: boolean;
-  className?: string;
-  colorScheme?: ColorScheme;
-}
+// ===================================
+// 4. STYLE CONFIGURATIONS
+// ===================================
 
+// Size class configurations
+const sizeClasses = {
+  sm: "text-xs px-2 py-1 gap-1",
+  md: "text-sm px-3 py-1.5 gap-1.5",
+  lg: "text-base px-4 py-2 gap-2",
+  xl: "text-lg px-5 py-2.5 gap-2.5",
+  xxl: "text-xl px-2 py-3 gap-1"
+};
+
+// Icon size configurations
+const iconSizes = {
+  sm: "text-[1.2em]",
+  md: "text-[1.4em]",
+  lg: "text-[1.5em]",
+  xl: "text-[1.6em]",
+  xxl: "text-[2.5em]",
+};
+
+// ===================================
+// 5. COMPONENTS
+// ===================================
+
+// Main TechBadge component
 export default function TechBadge({
   tech,
   size = "md",
   showLabel = true,
   showbg = true,
   className = "",
-  colorScheme = 'mono', // Default to minimal scheme
+  colorScheme = 'mono', 
 }: TechBadgeProps) {
   const { icon: Icon, label } = brandTechData[tech];
   
@@ -239,23 +293,6 @@ export default function TechBadge({
     color = minimalColorScheme[techCategories[tech]];
   }
   
-  const sizeClasses = {
-    sm: "text-xs px-2 py-1 gap-1",
-    md: "text-sm px-3 py-1.5 gap-1.5",
-    lg: "text-base px-4 py-2 gap-2",
-    xl: "text-lg px-5 py-2.5 gap-2.5",
-    xxl: "text-xl px-2 py-3 gap-1"
-  };
-
-  const iconSizes = {
-    sm: "text-[1.2em]",
-    md: "text-[1.4em]",
-    lg: "text-[1.5em]",
-    xl: "text-[1.6em]",
-    xxl: "text-[2.5em]",
-  };
-
-  // Rounded styles based on color scheme
   const roundedStyles = colorScheme === 'mono' 
     ? "rounded-lg" // More rounded for Notion-like feel
     : "rounded-md";
@@ -278,14 +315,9 @@ export default function TechBadge({
     }
   }
 
-  // Add hover effect for mono scheme
-  const hoverEffect = colorScheme === 'mono' 
-    ? "hover:bg-gray-200 hover:border-gray-300 transition-colors" 
-    : "";
-
   return (
     <span
-      className={`${baseClasses} ${colorClasses} ${hoverEffect}`}
+      className={`${baseClasses} ${colorClasses}`}
       role="img"
       aria-label={showLabel ? undefined : `${label} icon`}
     >
@@ -298,13 +330,7 @@ export default function TechBadge({
   );
 }
 
-// Optional Toggle Component for Color Scheme Switching
-interface ColorSchemeToggleProps {
-  currentScheme: ColorScheme;
-  onChange: (scheme: ColorScheme) => void;
-  className?: string;
-}
-
+// Color Scheme Toggle Component
 export function ColorSchemeToggle({
   currentScheme,
   onChange,
@@ -346,31 +372,3 @@ export function ColorSchemeToggle({
   );
 }
 
-// Example component showing usage of both the TechBadge and ColorSchemeToggle
-export function TechBadgeShowcase() {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('minimal');
-  
-  const technologies: Technology[] = [
-    'typescript', 'react', 'nextjs', 'tailwindcss', 
-    'nodejs', 'prisma', 'postgresql'
-  ];
-  
-  return (
-    <div className="space-y-6">
-      <ColorSchemeToggle 
-        currentScheme={colorScheme} 
-        onChange={setColorScheme} 
-      />
-      
-      <div className="flex flex-wrap gap-2">
-        {technologies.map(tech => (
-          <TechBadge 
-            key={tech} 
-            tech={tech} 
-            colorScheme={colorScheme} 
-          />
-        ))}
-      </div>
-    </div>
-  );
-}

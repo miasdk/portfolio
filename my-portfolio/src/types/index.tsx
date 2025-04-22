@@ -116,5 +116,7 @@ export type Technology =
     }[];
   }
 
+  export type ColorScheme = 'brand' | 'mono' | 'minimal';
+
 
 

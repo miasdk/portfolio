@@ -9,7 +9,7 @@ import ProjectsCarousel from "../components/ProjectsCarousel";
 import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "../components/ExperienceCard";
 import ContactForm from "../components/ContactForm";
-import ColorSchemeToggle from "../components/TechBadge";
+import TechnologyShowcase from "src/components/TechnologyShowcase";
 
 export default function Home() {
   return (
@@ -68,6 +68,13 @@ export default function Home() {
             </div>
           ))}
         </div>
+        </div>
+      </section>
+
+      <section id="technology" className="mb-12 px-4">
+        <h2 className="text-2xl font-bold mb-6 text-center">Technologies</h2>
+        <div className="max-w-screen-xl mx-auto">
+          <TechnologyShowcase />
         </div>
       </section>
 
