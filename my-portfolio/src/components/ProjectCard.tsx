@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, className = "" }: ProjectCardProps) {
     return (
-        <article className={`group h-full flex flex-col border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 bg-white ${className}`}>
+        <article className={`group h-full flex flex-col border border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 bg-white ${className}`}>
             {project.image && (
                 <div className="relative h-52 w-full flex-shrink-0 overflow-hidden">
                     <Image

@@ -66,9 +66,9 @@ export default function TechnologyShowcase() {
       "nodejs",
       "express",
       "supabase",
-      "prisma",
-      "mongodb",
       "postgresql",
+      "python",
+      "firebase",
     ],
     infra: [
       "git",
@@ -97,7 +97,7 @@ export default function TechnologyShowcase() {
           return (
             <div 
               key={category} 
-              className={`space-y-4 rounded-lg border border-gray-200 p-5 transition-shadow hover:shadow-md`}
+              className={`space-y-4 rounded-lg border border-gray-300 p-5 transition-shadow hover:shadow-md`}
             >
               <div className="flex items-center">
                 <span className={`p-2 rounded-lg mr-3 ${styles.iconColor} bg-white shadow-sm`}>
