@@ -47,7 +47,7 @@ export default function TechnologyShowcase() {
     frontend: ["typescript", "react", "nextjs", "tailwindcss"],
     backend: ["nodejs", "express", "supabase", "postgresql", "python", "firebase"],
     infra: ["git", "github", "vercel", "netlify", "docker", "awslambda"],
-  }
+  } 
 
   return (
     <div className="space-y-8">
@@ -95,14 +95,14 @@ export default function TechnologyShowcase() {
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-200 border-opacity-50">
-                  {technologies.map((tech) => (
+                    {technologies.map((tech: Technology) => (
                     <TechBadge
                       key={tech}
                       tech={tech}
                       colorScheme={colorScheme}
                       className="hover:scale-105 hover:shadow-sm transition-all duration-300"
                     />
-                  ))}
+                    ))}
                 </div>
               </div>
             </div>
