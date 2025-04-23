@@ -59,7 +59,7 @@ export default function AboutPage() {
                 </svg>
               </Link>
               <Link 
-                href={`mailto:${profile.contact.email || "hello@example.com"}`}
+                href={`mailto:${profile.contact?.email}`}
                 className="text-gray-700 hover:text-gray-900 transition-colors"
                 aria-label="Email"
               >
