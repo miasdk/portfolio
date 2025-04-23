@@ -26,7 +26,8 @@ import {
   SiAwslambda,
   SiPython,
   SiSupabase,
-  SiSwift
+  SiSwift,
+  SiJest
 } from 'react-icons/si';
 import { Technology } from '../types';
 
@@ -99,6 +100,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   redux: "frontend",
   figma: "frontend",
   swift: "frontend",
+  jest: "frontend",
   
   // Backend Technologies
   nodejs: "backend",
@@ -178,6 +180,11 @@ const brandTechData = {
     icon: SiSwift,
     color: "bg-[#f05138] text-white",
     label: "Swift",
+  },
+  jest: {
+    icon: SiJest,
+    color: "bg-[#c21325] text-white",
+    label: "Jest",
   },
   
   // Backend & Data

@@ -24,6 +24,7 @@ export type Technology =
   | "python"
   | "supabase"
   | "swift"
+  | "jest"
   ;
 
   export interface Project {

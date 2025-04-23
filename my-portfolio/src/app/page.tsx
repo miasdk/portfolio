@@ -138,7 +138,7 @@ export default function Home() {
           <div className="w-20 h-1 bg-gray-900 mx-auto mb-6"></div>
 
           <p className="text-center mb-10 text-gray-700 max-w-2xl mx-auto">
-            Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out 🤗
+            Whether you have a question, or just want to say hi, feel free to reach out 🤗
           </p>
 
           <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8">

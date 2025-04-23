@@ -1,112 +1,117 @@
 import { ExperienceItem, Technology } from "../types";
 import CodePathLogo from "../public/images/codepathlogo.jpg";
 import HunterLogo from "../public/images/HunterCollege.jpg";
+import EvergreenLogo from "../public/images/evergreen-logo.jpg";
+
 export const experience: ExperienceItem[] = [
   {
     id: "experience1",
-    role: "Advanced Web Development Student",
-    company: "CodePath",
-    period: "Jan 2023 - May 2023", // Adjust to your actual dates
-    logo: CodePathLogo, // Add logo if available
+    role: "Web Development Intern",
+    company: "CUNY Hunter College",
+    period: "Jan 2025 - Present",
+    logo: HunterLogo,
     description: [
-      "Built full-stack web applications using modern JavaScript frameworks including React",
-      "Implemented secure authentication flows and database management with Firebase and Supabase",
-      "Developed RESTful APIs and integrated third-party services",
-      "Collaborated with peers on group projects using Git for version control",
-      "Participated in code reviews and applied best practices for web security and performance"
+      "Spearheading development of a campus event management platform in collaboration with a team of 3",
+      "Designing and implementing responsive UI components with React and styled with TailwindCSS, ensuring WCAG 2.1 accessibility compliance",
+      "Building secure user authentication system and real-time database functionalities with Firebase",
+      "Developing comprehensive client-side form validation with error handling to enhance user experience",
+      "Optimizing application performance with lazy loading and code splitting, and deploying to Vercel with CI/CD pipeline"
     ],
     skills: [
       "typescript",
-      "react", 
-      "nodejs", 
-      "firebase",
-      "git",
-      "tailwindcss"
-    ] as Technology[],
-    location: {
-      city: "New York", // Your location
-      country: "USA",
-    },
-    links: {
-      companyWebsite: "https://codepath.org",
-      projectLink: "https://github.com/yourusername/your-web-project", // Your GitHub project
-    },
-    metrics: [
-      {
-        value: "100%",
-        label: "Course Completion"
-      },
-      {
-        value: "3+",
-        label: "Web Apps Built"
-      }
-    ]
-  },
-  
-  {
-    id: "experience2",
-    role: "iOS Development Student",
-    company: "CodePath",
-    period: "Aug 2022 - Dec 2022", // Adjust to your actual dates
-    logo: CodePathLogo, // Add logo if available
-    description: [
-      "Developed multiple iOS applications using Swift and UIKit",
-      "Implemented Core Data for persistent storage and user preferences",
-      "Integrated RESTful APIs and JSON parsing for dynamic content",
-      "Applied MVC architecture patterns for maintainable code structure",
-      "Created responsive UIs that work across multiple iOS device sizes"
-    ],
-    skills: [
-      "git",
-      "firebase",
-      "swift",
-    ] as Technology[],
-    location: {
-      city: "New York", // Your location
-      country: "USA",
-    },
-    links: {
-      companyWebsite: "https://codepath.org",
-      projectLink: "https://github.com/yourusername/your-ios-project", // Your GitHub project
-    },
-    metrics: [
-      {
-        value: "100%",
-        label: "Course Completion"
-      },
-      {
-        value: "4+",
-        label: "iOS Apps Created"
-      }
-    ]
-  },
-  
-  {
-    id: "experience3",
-    role: "Web Development Intern",
-    company: "CUNY Hunter College",
-    period: "Sep 2021 - Dec 2021",
-    logo: HunterLogo,
-    description: [
-      "Collaborated with a team of 3 to build a campus event management platform",
-      "Designed responsive UI components with React and styled with TailwindCSS",
-      "Integrated user authentication and database functionalities with Firebase",
-      "Implemented client-side form validation and error handling",
-      "Deployed and maintained the application on Vercel"
-    ],
-    skills: [
-      "javascript",
       "react",
+      "nextjs",
       "tailwindcss",
       "firebase",
       "git"
     ] as Technology[],
     location: {
-      city: "New York", // Your location
+      city: "New York",
       country: "USA",
     },
     links: {
-      projectLink: "https://github.com/yourusername/university-project", // Your GitHub project
+      companyWebsite: "https://hunter.cuny.edu",
+      projectLink: "https://github.com/yourusername/hunter-events-platform",
     },
-  }
+    metrics: []
+  },
+  {
+    id: "experience2",
+    role: "Software Engineering Intern",
+    company: "Evergreen Investments",
+    period: "June 2024 - Dec 2024",
+    logo: EvergreenLogo,
+    description: [
+      "Engineered robust web applications using React and Node.js, delivering features for client portfolio management",
+      "Architected and implemented secure user authentication system with role-based access control, enhancing data protection",
+      "Collaborated with UX/UI designers to create intuitive interfaces that improved user experience",
+      "Implemented comprehensive unit and integration testing with Jest and React Testing Library",
+      "Contributed to agile development processes including daily stand-ups, sprint planning, and retrospectives"
+    ],
+    skills: [
+      "react",
+      "nodejs",
+      "typescript",
+      "git",
+      "firebase",
+      "swift",
+      "jest"
+    ] as Technology[],
+    location: {
+      city: "New York",
+      country: "USA",
+    },
+    links: {
+      companyWebsite: "https://evergreeninvestments.com",
+      projectLink: "https://github.com/yourusername/evergreen-projects",
+    },
+    metrics: []
+  },
+  {
+    id: "experience3",
+    role: "Advanced Web Development Mentee",
+    company: "CodePath",
+    period: "Aug 2023 - Jan 2024",
+    logo: CodePathLogo,
+    description: [
+      "Developed multiple full-stack web applications utilizing React, Next.js, and TypeScript in a rigorous industry-focused program",
+      "Engineered secure authentication workflows and data management systems using Firebase and Supabase, implementing best practices for data security",
+      "Created and consumed RESTful APIs with Express.js, integrating third-party services to enhance application functionality",
+      "Collaborated with peers on group projects using Git for version control and agile methodologies",
+      "Applied web security best practices and performance optimization techniques across all projects"
+    ],
+    skills: [
+      "javascript",
+      "react",
+      "nextjs",
+      "nodejs",
+      "express",
+      "firebase",
+      "supabase",
+      "git",
+      "tailwindcss"
+    ] as Technology[],
+    location: {
+      city: "New York",
+      country: "USA",
+    },
+    links: {
+      companyWebsite: "https://codepath.org",
+      projectLink: "https://github.com/yourusername/codepath-advanced-web",
+    },
+    metrics: [
+      {
+        value: "100%",
+        label: "Course Completion"
+      },
+      {
+        value: "5+",
+        label: "Web Apps Built"
+      },
+      {
+        value: "Top 10%",
+        label: "Graduating Class"
+      }
+    ]
+  },
 ];
