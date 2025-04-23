@@ -28,7 +28,7 @@ export default function AboutPage() {
         
         <div className="w-full md:w-7/12 space-y-6">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
+            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">
               Hello, I'm Mia 👋
             </h1>
             
