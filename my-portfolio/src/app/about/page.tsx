@@ -165,7 +165,7 @@ export default function AboutPage() {
             I'm always open to discussing new projects or opportunities.
           </p>
           <Link 
-            href={`mailto:${profile.email || "hello@example.com"}`}
+            href={`mailto:${profile.contact.email || "hello@example.com"}`}
             className="border border-gray-900 px-6 py-2 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors"
           >
             Say Hello
