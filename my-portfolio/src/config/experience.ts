@@ -11,7 +11,6 @@ export const experience: ExperienceItem[] = [
     period: "Jan 2025 - Present",
     logo: HunterLogo,
     description: [
-      "Spearheading development of a campus event management platform in collaboration with a team of 3",
       "Designing and implementing responsive UI components with React and styled with TailwindCSS, ensuring WCAG 2.1 accessibility compliance",
       "Building secure user authentication system and real-time database functionalities with Firebase",
       "Developing comprehensive client-side form validation with error handling to enhance user experience",
@@ -42,7 +41,6 @@ export const experience: ExperienceItem[] = [
     period: "June 2024 - Dec 2024",
     logo: EvergreenLogo,
     description: [
-      "Engineered robust web applications using React and Node.js, delivering features for client portfolio management",
       "Architected and implemented secure user authentication system with role-based access control, enhancing data protection",
       "Collaborated with UX/UI designers to create intuitive interfaces that improved user experience",
       "Implemented comprehensive unit and integration testing with Jest and React Testing Library",
@@ -75,7 +73,6 @@ export const experience: ExperienceItem[] = [
     logo: CodePathLogo,
     description: [
       "Developed multiple full-stack web applications utilizing React, Next.js, and TypeScript in a rigorous industry-focused program",
-      "Engineered secure authentication workflows and data management systems using Firebase and Supabase, implementing best practices for data security",
       "Created and consumed RESTful APIs with Express.js, integrating third-party services to enhance application functionality",
       "Collaborated with peers on group projects using Git for version control and agile methodologies",
       "Applied web security best practices and performance optimization techniques across all projects"

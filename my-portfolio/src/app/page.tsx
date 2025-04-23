@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden">
-        <div className=""></div>
         <div className="container mx-auto relative z-10 flex flex-col items-center">
           <div className="relative mb-8">
             <Image
