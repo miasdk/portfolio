@@ -24,4 +24,5 @@ export const profile: Profile = {
         city: "New York City",
         country: "USA",
     },
+    email: ""
 };
