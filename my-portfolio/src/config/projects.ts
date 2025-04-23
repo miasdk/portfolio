@@ -8,7 +8,7 @@ export const projects: Project[] = [
     title: "eCart",
     description: "E-commerce platform with Stripe payment integration, Firebase authentication, and PostgreSQL database. Built responsive UI with React and Tailwind CSS featuring product catalog and cart functionality.",
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
-    date: "2024-2025",
+    date: "04/2025",
     links: {
       github: "https://github.com/miasdk/Vite-Ecommerce-Template",
     },
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     title: "Portfolio",
     description: "Performance-optimized portfolio built with Next.js and TypeScript. Features SEO-friendly server-side rendering, responsive design, and custom component library for consistent UI/UX.",
     technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
-    date: "2025",
+    date: "04/2025",
     links: {
       github: "https://github.com/miasdk/Portfolio",
     },

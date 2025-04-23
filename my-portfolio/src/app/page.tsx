@@ -107,6 +107,7 @@ export default function Home() {
                 key={exp.id}
                 experience={{
                   ...exp,
+                  logo: typeof exp.logo === "object" ? exp.logo.src : exp.logo,
                   location: {
                     city: exp.location?.city || "Unknown",
                     country: exp.location?.country || "Unknown",

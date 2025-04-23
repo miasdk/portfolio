@@ -108,8 +108,5 @@ export const experience: ExperienceItem[] = [
     links: {
       projectLink: "https://github.com/yourusername/university-project", // Your GitHub project
     },
-    meta: {
-      isTeamProject: true
-    }
   }
 ];

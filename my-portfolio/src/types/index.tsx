@@ -35,7 +35,7 @@ export type Technology =
     technologies: Technology[];
     
     // Media (optional)
-    image?: string; // Path to image (optional)
+    image?: string | StaticImageData; // Path to image (optional)
     videoUrl?: string; // For demo videos
     
     date: 
@@ -100,7 +100,7 @@ export type Technology =
     period: string; // e.g., "Jan 2020 - Present"
     description: string[]; 
     skills: Technology[]; // Technologies used
-    logo?: string; // Optional logo image
+    logo?: string | StaticImageData; // Optional logo image
     links?: {
       companyWebsite?: string;
       projectLink?: string;
@@ -108,8 +108,8 @@ export type Technology =
       github?: string;
     }
     location?: {
-      city?: string;
-      country?: string;
+      city?: string | string;
+      country?: string | string;
     };
     metrics?: {
       value: string; // e.g., "20%"
