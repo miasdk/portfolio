@@ -26,7 +26,7 @@ export default function AboutPage() {
           
           <div className="w-full md:w-1/2 space-y-6">
             <h1 className="text-3xl font-light tracking-wide">
-              Hello, I'm <span className="font-medium">Mia</span>
+              Hello, I'm <span className="font-medium">Mia</span> 👋
             </h1>
             
             <p className="text-gray-700 leading-relaxed">
@@ -137,15 +137,19 @@ export default function AboutPage() {
             <ul className="space-y-4 text-gray-700">
               <li className="flex items-baseline gap-3">
                 <span className="w-1 h-1 rounded-full bg-gray-400"></span>
-                <span>Exploring coffee shops around the city</span>
+                <span>Data visualization and analysis</span>
               </li>
               <li className="flex items-baseline gap-3">
                 <span className="w-1 h-1 rounded-full bg-gray-400"></span>
-                <span>Watching a good film</span>
+                <span>AI/ML LLM integration</span>
               </li>
               <li className="flex items-baseline gap-3">
                 <span className="w-1 h-1 rounded-full bg-gray-400"></span>
-                <span>Hanging out with my cat</span>
+                <span>Design and UX/UI principles</span>
+              </li>
+              <li className="flex items-baseline gap-3">
+                <span className="w-1 h-1 rounded-full bg-gray-400"></span>
+                <span>Reading about the latest in tech 🤓</span>
               </li>
             </ul>
           </div>

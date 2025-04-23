@@ -9,7 +9,7 @@ export const profile: Profile = {
     links: {
         github: "https://github.com/miasdk",
         linkedIn: "https://www.linkedin.com/in/miaelena/",
-        resume: "https://drive.google.com/file/d/1gk0v2x4q3e5f8z7g9h8g8g8g8g/view?usp=sharing",
+        resume: "https://docs.google.com/document/d/18HHgbBzyzwlzygUA7-VSyhm6DMrSOccT3SqBcPc2CGk/edit?usp=sharing",
     },
     skills: [
         "typescript",

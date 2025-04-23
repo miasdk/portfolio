@@ -9,8 +9,10 @@ export default function Navbar() {
     return (
         <nav className="bg-white">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-                <div className="text-xl font-bold text-gray-900">
-                    <Link href="/">Mia E. Tapia</Link>
+                <div className="flex items-center space-x-2">
+                    <Link href="/" className="text-xl font-bold text-gray-900">
+                        Mia E. Tapia
+                    </Link>
                 </div>
 
                 <ul className="hidden md:flex space-x-4">
@@ -29,7 +31,7 @@ export default function Navbar() {
             </div>
             {isOpen && (
                 <div className="md:hidden px-4 py-2">
-                    <ul className="flext flex-col space-y-2">
+                    <ul className="flex flex-col space-y-2">
                         <MobileNavLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileNavLink>
                         <MobileNavLink href="/about" onClick={() => setIsOpen(false)}>About</MobileNavLink>
                         <MobileNavLink href="#experience" onClick={() => setIsOpen(false)}>Experience</MobileNavLink>
@@ -53,7 +55,6 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
         </li>
     );
 }
-
 
 function MobileNavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) {
     return (

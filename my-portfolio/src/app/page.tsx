@@ -13,7 +13,6 @@ import { ArrowDown, FileText, Linkedin } from "lucide-react"
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden">
         <div className=""></div>
         <div className="container mx-auto relative z-10 flex flex-col items-center">
@@ -72,7 +71,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Projects</h2>
@@ -95,7 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience Section */}
       <section id="experience" className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Experience</h2>
@@ -119,7 +116,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Technology Section */}
       <section id="technology" className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Technologies</h2>
@@ -131,7 +127,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Contact Me</h2>

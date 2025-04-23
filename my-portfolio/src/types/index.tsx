@@ -71,6 +71,7 @@ export type Technology =
   import { StaticImageData } from "next/image";
   
   export interface Profile {
+    email: string;
       name: string;
       title: string;
       description: string;

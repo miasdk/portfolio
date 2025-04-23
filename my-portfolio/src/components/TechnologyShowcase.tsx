@@ -51,14 +51,12 @@ export default function TechnologyShowcase() {
 
   return (
     <div className="space-y-8">
-      {/* Color scheme toggle */}
       <div className="flex justify-center mb-8">
         <div className="bg-white p-2 rounded-lg shadow-sm border border-gray-100">
           <ColorSchemeToggle currentScheme={colorScheme} onChange={setColorScheme} />
         </div>
       </div>
 
-      {/* Categories grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {Object.entries(techCategories).map(([categoryKey, technologies]) => {
           const category = categories[categoryKey as keyof typeof categories]
@@ -74,10 +72,8 @@ export default function TechnologyShowcase() {
                 className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-70 group-hover:opacity-100 transition-opacity duration-300`}
               ></div>
 
-              {/* Card content */}
               <div className="relative z-10 p-6 h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-5">
-                  {/* Icon with gradient background */}
                   <div
                     className={`flex-shrink-0 p-3 rounded-lg bg-white shadow-sm border border-gray-100 ${category.borderHover} transition-colors duration-300`}
                   >
@@ -86,14 +82,12 @@ export default function TechnologyShowcase() {
                     {categoryKey === "infra" && <CategoryIcon className="w-5 h-5 text-amber-600" />}
                   </div>
 
-                  {/* Category title and description */}
                   <div>
                     <h2 className="text-lg font-bold text-gray-900">{category.title}</h2>
                     <p className="text-sm text-gray-600 mt-1">{category.description}</p>
                   </div>
                 </div>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-200 border-opacity-50">
                     {technologies.map((tech: Technology) => (
                     <TechBadge
