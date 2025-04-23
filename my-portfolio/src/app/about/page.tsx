@@ -8,7 +8,6 @@ import Mia from "../../public/images/mia-about1.jpg";
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
-      {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 pt-24 pb-16">
         <div className="flex flex-col md:flex-row md:items-center gap-16">
           <div className="mx-auto w-100 md:w-1/2">
@@ -60,7 +59,7 @@ export default function AboutPage() {
                 </svg>
               </Link>
               <Link 
-                href={`mailto:${profile.email || "hello@example.com"}`}
+                href={`mailto:${profile.contact.email || "hello@example.com"}`}
                 className="text-gray-700 hover:text-gray-900 transition-colors"
                 aria-label="Email"
               >
@@ -73,7 +72,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* GitHub Activity Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <h2 className="text-2xl font-light tracking-wide">GitHub Activity</h2>

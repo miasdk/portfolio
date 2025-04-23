@@ -18,11 +18,11 @@ export const profile: Profile = {
         "supabase",
     ] as Technology[],
     contact: {
-        email: "miaelenatapia@gmail.com",
+        email: "miatapiaswe@gmail.com",
+        phone: "+1 (123) 456-7890",
     },
     location: {
         city: "New York City",
         country: "USA",
-    },
-    email: ""
+    }
 };
