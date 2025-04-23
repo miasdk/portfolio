@@ -31,7 +31,7 @@ export default function ColorSchemeToggle({
                         : 'bg-gray-200 text-gray-700'
                 }`}
             >
-                Notion Style
+                Monochrome
             </button>
             <button
                 onClick={() => onChange('minimal')}

@@ -23,6 +23,7 @@ export type Technology =
   | "awslambda"
   | "python"
   | "supabase"
+  | "swift"
   ;
 
   export interface Project {

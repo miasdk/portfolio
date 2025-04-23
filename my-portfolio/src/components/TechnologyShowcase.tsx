@@ -1,132 +1,114 @@
-'use client';
-import { useState } from "react";
-import TechBadge from "./TechBadge";
-import ColorSchemeToggle from "./ColorSchemeToggle";
-import { Technology, ColorScheme } from "../types";
+"use client"
 
-// Category icons and colors
-const categoryStyles = {
+import { useState } from "react"
+import TechBadge from "./TechBadge"
+import ColorSchemeToggle from "./ColorSchemeToggle"
+import { Code, Database, Settings } from "lucide-react"
+import type { Technology, ColorScheme } from "../types"
+
+// Category configurations
+const categories = {
   frontend: {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 2H4v2h12V5zM4 13V9h12v4H4z" clipRule="evenodd" />
-      </svg>
-    ),
-    iconColor: "text-blue-600",
+    title: "Frontend Development",
+    description: "Modern tools and frameworks I use to build user interfaces",
+    icon: Code,
+    gradient: "from-blue-50 to-indigo-50",
+    iconGradient: "from-blue-500 to-indigo-600",
+    borderHover: "group-hover:border-blue-200",
   },
   backend: {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
-      </svg>
-    ),
-    iconColor: "text-emerald-600",
+    title: "Backend & Data",
+    description: "Technologies I work with for server-side development",
+    icon: Database,
+    gradient: "from-emerald-50 to-teal-50",
+    iconGradient: "from-emerald-500 to-teal-600",
+    borderHover: "group-hover:border-emerald-200",
   },
   infra: {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-      </svg>
-    ),
-    iconColor: "text-amber-600",
-  }
-};
-
-// Category descriptions
-const categoryDescriptions = {
-  frontend: "Tools and frameworks I use to build user interfaces",
-  backend: "Technologies I work with for server-side development",
-  infra: "DevOps and infrastructure tools I leverage for deployment"
-};
-
-// Display names for categories
-const categoryDisplayNames = {
-  frontend: "Frontend Development",
-  backend: "Backend & Data",
-  infra: "DevOps & Infrastructure"
-};
+    title: "DevOps & Infrastructure",
+    description: "DevOps and infrastructure tools I leverage for deployment",
+    icon: Settings,
+    gradient: "from-amber-50 to-orange-50",
+    iconGradient: "from-amber-500 to-orange-600",
+    borderHover: "group-hover:border-amber-200",
+  },
+}
 
 interface TechnologyCategories {
-  frontend: Technology[];
-  backend: Technology[];
-  infra: Technology[];
+  frontend: Technology[]
+  backend: Technology[]
+  infra: Technology[]
 }
 
 export default function TechnologyShowcase() {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("brand");
-  
+  const [colorScheme, setColorScheme] = useState<ColorScheme>("mono")
+
   const techCategories: TechnologyCategories = {
-    frontend: [
-      "typescript",
-      "react",
-      "nextjs",
-      "tailwindcss",
-    ],
-    backend: [
-      "nodejs",
-      "express",
-      "supabase",
-      "postgresql",
-      "python",
-      "firebase",
-    ],
-    infra: [
-      "git",
-      "github",
-      "vercel",
-      "netlify",
-      "docker",
-      "awslambda",
-    ],
-  };
+    frontend: ["typescript", "react", "nextjs", "tailwindcss"],
+    backend: ["nodejs", "express", "supabase", "postgresql", "python", "firebase"],
+    infra: ["git", "github", "vercel", "netlify", "docker", "awslambda"],
+  }
 
   return (
     <div className="space-y-8">
-      <div className="flex justify-center mb-6">
-        <ColorSchemeToggle
-          currentScheme={colorScheme}
-          onChange={setColorScheme}
-        />
+      {/* Color scheme toggle */}
+      <div className="flex justify-center mb-8">
+        <div className="bg-white p-2 rounded-lg shadow-sm border border-gray-100">
+          <ColorSchemeToggle currentScheme={colorScheme} onChange={setColorScheme} />
+        </div>
       </div>
-      
+
+      {/* Categories grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {Object.entries(techCategories).map(([category, technologies]) => {
-          const categoryKey = category as keyof typeof categoryStyles;
-          const styles = categoryStyles[categoryKey];
-          
+        {Object.entries(techCategories).map(([categoryKey, technologies]) => {
+          const category = categories[categoryKey as keyof typeof categories]
+          const CategoryIcon = category.icon
+
           return (
-            <div 
-              key={category} 
-              className={`space-y-4 rounded-lg border border-gray-300 p-5 transition-shadow hover:shadow-md`}
+            <div
+              key={categoryKey}
+              className={`group relative rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg`}
             >
-              <div className="flex items-center">
-                <span className={`p-2 rounded-lg mr-3 ${styles.iconColor} bg-white shadow-sm`}>
-                  {styles.icon}
-                </span>
-                <div>
-                  <h2 className={`text-lg font-semibold`}>
-                    {categoryDisplayNames[categoryKey]}
-                  </h2>
-                  <p className="text-sm text-gray-600">
-                    {categoryDescriptions[categoryKey]}
-                  </p>
+              {/* Background gradient */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-70 group-hover:opacity-100 transition-opacity duration-300`}
+              ></div>
+
+              {/* Card content */}
+              <div className="relative z-10 p-6 h-full flex flex-col">
+                <div className="flex items-start gap-4 mb-5">
+                  {/* Icon with gradient background */}
+                  <div
+                    className={`flex-shrink-0 p-3 rounded-lg bg-white shadow-sm border border-gray-100 ${category.borderHover} transition-colors duration-300`}
+                  >
+                    {categoryKey === "frontend" && <CategoryIcon className="w-5 h-5 text-blue-600" />}
+                    {categoryKey === "backend" && <CategoryIcon className="w-5 h-5 text-emerald-600" />}
+                    {categoryKey === "infra" && <CategoryIcon className="w-5 h-5 text-amber-600" />}
+                  </div>
+
+                  {/* Category title and description */}
+                  <div>
+                    <h2 className="text-lg font-bold text-gray-900">{category.title}</h2>
+                    <p className="text-sm text-gray-600 mt-1">{category.description}</p>
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-200 border-opacity-50">
+                  {technologies.map((tech) => (
+                    <TechBadge
+                      key={tech}
+                      tech={tech}
+                      colorScheme={colorScheme}
+                      className="hover:scale-105 hover:shadow-sm transition-all duration-300"
+                    />
+                  ))}
                 </div>
               </div>
-              
-              <div className="flex flex-wrap gap-2 pt-2">
-                {technologies.map((tech) => (
-                  <TechBadge 
-                    key={tech} 
-                    tech={tech} 
-                    colorScheme={colorScheme}
-                    className="hover:scale-105 transition-transform" 
-                  />
-                ))}
-              </div>
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
