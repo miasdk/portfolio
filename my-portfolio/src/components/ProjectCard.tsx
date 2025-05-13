@@ -12,11 +12,9 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, className = "" }: ProjectCardProps) {
   return (
     <article className={`group relative h-full flex flex-col rounded-xl overflow-hidden bg-white ${className}`}>
-      {/* Card wrapper with enhanced shadow and border */}
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray-100 to-gray-50 shadow-md group-hover:shadow-lg transition-all duration-300"></div>
 
       <div className="relative flex flex-col h-full z-10">
-        {/* Image section with overlay gradient */}
         {project.image && (
           <div className="relative h-52 w-full flex-shrink-0 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>

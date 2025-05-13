@@ -4,6 +4,7 @@ import { profile } from "../../config/profile";
 import TechBadge from "../../components/TechBadge";
 import Cat from "../../public/images/cat-2.jpg";
 import Mia from "../../public/images/mia-about1.jpg";
+import DisqusComments from "src/components/DisqusComments";
 
 export default function AboutPage() {
   return (
@@ -224,6 +225,19 @@ export default function AboutPage() {
           </Link>
         </div>
       </section>
+
+
+      {/* Disqus comments */}
+      <div className="border-t border-gray-100 max-w-4xl mx-auto">
+      <section className="mt-16">
+        <h2 className="text-2xl font-bold mb-6">Comments</h2>
+        <DisqusComments 
+          pageIdentifier="about-page" 
+          pageUrl="https://miaelena.vercel.app/about"
+          title="About Me"
+        />
+      </section>
+      </div>
     </main>
   );
 }
