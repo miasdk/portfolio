@@ -37,17 +37,19 @@ export const projects: Project[] = [
   },
   {
     id: "project3",
-    title: "Markdown Editor",
-    description: "Real-time markdown editor with syntax highlighting and local storage persistence. Implemented custom rendering pipeline for optimized preview performance.",
+    title: "AI Application",
+    description: "AI-driven web application utilizing OpenAI API for natural language processing. Features user authentication, data visualization, and responsive design.",
     technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
-    date: "2023",
+    date: "2025",
     links: {
       github: "https://github.com/yourname/portfolio",
-      demo: "https://yourportfolio.com"
     },
-    image: "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1466781783364-36c955e42a7f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     meta: {
-      isWIP: true,    },
+      isWIP: true,
+      isFeatured: true,   
+      isAI: true,
+     },
     platforms: ["web", "mobile"]
   },
   {
@@ -70,6 +72,7 @@ export const projects: Project[] = [
     meta: {
       isWIP: true,
       isTeamProject: true,
+   
     },
     platforms: ["web", "mobile"]
   },

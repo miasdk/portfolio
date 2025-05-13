@@ -75,24 +75,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="py-20 px-4 bg-gray-50">
+      <section id="projects" className="py-20 px-10 bg-gray-50">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Projects</h2>
           <div className="w-20 h-1 bg-gray-900 mx-auto mb-12"></div>
-
+          
           <div className="mx-auto max-w-screen-xl">
-            <div className="flex flex-wrap justify-center gap-6">
-              {projects
-                .filter((project) => project.meta?.isFeatured)
-                .map((project) => (
-                  <div
-                    key={project.id}
-                    className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] max-w-[400px]"
-                  >
-                    <ProjectCard project={project} />
-                  </div>
-                ))}
-            </div>
+            {(() => {
+              const featuredProjects = projects.filter((project) => project.meta?.isFeatured);
+              const projectCount = featuredProjects.length;
+              
+              // Determine the appropriate grid class based on project count
+              const xlGridClass = projectCount >= 4 && projectCount % 4 === 0 
+                ? "xl:grid-cols-4" 
+                : "xl:grid-cols-3";
+              
+              return (
+                <div className={`grid grid-cols-1 sm:grid-cols-2  ${xlGridClass} gap-6`}>
+                  {featuredProjects.map((project, index, array) => (
+                    <div
+                      key={project.id}
+                      className={`${
+                        // If it's the last project and the total number of projects is odd
+                        index === array.length - 1 && array.length % 2 !== 0
+                          ? "sm:col-span-2 lg:col-span-1"
+                          : ""
+                      }`}
+                    >
+                      <ProjectCard project={project} />
+                    </div>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
         </div>
       </section>
