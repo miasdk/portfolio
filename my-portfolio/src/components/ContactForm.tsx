@@ -48,7 +48,7 @@ export default function ContactForm() {
     
     try {
       // Send to API endpoint - update this to your correct endpoint
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export default function ContactForm() {
           loading: false,
           success: true,
           error: false,
-          message: 'Thank you for your message! I will get back to you soon.',
+          message: 'Thank you for your message! I will get back to you soon. 🌟',
         });
         
         // Reset form
@@ -110,7 +110,7 @@ export default function ContactForm() {
 
           <h3 className="text-2xl font-bold text-gray-900 mb-3">Thank you!</h3>
           <p className="text-gray-700 max-w-md mx-auto leading-relaxed">
-            Your message has been sent successfully. I'll get back to you as soon as possible.
+            Your message has been sent successfully. I'll get back to you as soon as possible 🌟
           </p>
 
           <button
