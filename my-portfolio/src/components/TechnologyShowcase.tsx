@@ -44,9 +44,9 @@ export default function TechnologyShowcase() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("mono")
 
   const techCategories: TechnologyCategories = {
-    frontend: ["typescript", "react", "nextjs", "tailwindcss"],
-    backend: ["nodejs", "express", "supabase", "postgresql", "python", "firebase"],
-    infra: ["git", "github", "vercel", "netlify", "docker", "awslambda"],
+    frontend: ["typescript", "react", "nextjs", "tailwindcss", "figma", "jest", "bootstrap"],
+    backend: ["nodejs", "express", "supabase", "postgresql", "python", "firebase", "mongodb", "cpp"],
+    infra: ["git", "github", "vercel", "netlify", "docker", "awslambda", "railway"],
   } 
 
   return (

@@ -27,7 +27,10 @@ import {
   SiPython,
   SiSupabase,
   SiSwift,
-  SiJest
+  SiJest,
+  SiCplusplus,
+  SiRailway,
+  SiBootstrap,
 } from 'react-icons/si';
 import { Technology } from '../types';
 
@@ -90,6 +93,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   typescript: "primary",
   javascript: "primary",
   python: "primary",
+  cpp: "primary",
   
   // Frontend Technologies
   html: "frontend",
@@ -101,6 +105,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   figma: "frontend",
   swift: "frontend",
   jest: "frontend",
+  bootstrap: "frontend",
   
   // Backend Technologies
   nodejs: "backend",
@@ -111,6 +116,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   mongodb: "backend",
   firebase: "backend",
   supabase: "backend",
+
   
   // Infrastructure Technologies
   git: "infra",
@@ -119,6 +125,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   netlify: "infra",
   docker: "infra",
   awslambda: "infra",
+  railway: "infra",
 };
 
 // Original brand color tech data
@@ -138,6 +145,11 @@ const brandTechData = {
     icon: SiPython,
     color: "bg-[#3776ab] text-[#ffd43b]",
     label: "Python",
+  },
+  cpp: {
+    icon: SiCplusplus,
+    color: "bg-[#00599c] text-white",
+    label: "C++",
   },
   
   // Frontend
@@ -185,6 +197,11 @@ const brandTechData = {
     icon: SiJest,
     color: "bg-[#c21325] text-white",
     label: "Jest",
+  },
+  bootstrap: {
+    icon: SiBootstrap,
+    color: "bg-[#563d7c] text-white",
+    label: "Bootstrap",
   },
   
   // Backend & Data
@@ -259,6 +276,11 @@ const brandTechData = {
     icon: SiAwslambda,
     color: "bg-[#ff9900] text-black",
     label: "AWS Lambda",
+  },
+  railway: {
+    icon: SiRailway,
+    color: "bg-[#ff5c00] text-white",
+    label: "Railway",
   },
 } satisfies Record<Technology, { icon: IconType; color?: string; label: string }>;
 

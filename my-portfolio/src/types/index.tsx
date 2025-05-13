@@ -25,6 +25,9 @@ export type Technology =
   | "supabase"
   | "swift"
   | "jest"
+  | "cpp"
+  | "railway"
+  | "bootstrap"
   ;
 
   export interface Project {
