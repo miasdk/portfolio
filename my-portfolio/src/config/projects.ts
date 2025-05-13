@@ -5,8 +5,8 @@ import project2 from "../public/images/portfolio.jpg";
 export const projects: Project[] = [
   {
     id: "project1",
-    title: "eCart",
-    description: "E-commerce platform with Stripe payment integration, Firebase authentication, and PostgreSQL database. Built responsive UI with React and Tailwind CSS featuring product catalog and cart functionality.",
+    title: "E-commerce Platform",
+    description: "Full-stack application with Stripe payment integration, Firebase authentication, and PostgreSQL database. Built responsive UI with React and Tailwind CSS featuring product catalog and cart functionality.",
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
     date: "04/2025",
     links: {
@@ -27,6 +27,7 @@ export const projects: Project[] = [
     date: "04/2025",
     links: {
       github: "https://github.com/miasdk/Portfolio",
+      demo: "https://miaelena.vercel.app/"
     },
     image: project2,
     meta: {

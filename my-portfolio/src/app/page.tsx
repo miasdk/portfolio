@@ -25,12 +25,18 @@ export default function Home() {
               priority
             />
           </div>
+          
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">{profile.name}</h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-6 font-light">{profile.title}</p>
-          <p className="text-gray-700 max-w-2xl mx-auto text-center leading-relaxed mb-8">{profile.description}</p>
-
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <p className="text-gray-700 max-w-2xl mx-auto text-center leading-relaxed mb-2">{profile.description}</p>
+          
+          <img
+          src="https://raw.githubusercontent.com/miaskyelena/contribution_snk/output/github-contribution-grid-snake.svg"
+          alt="GitHub Contribution Snake"
+          className="mx-auto w-full max-w-lg mb-2 "
+          />
+           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {profile.skills.map((tech: Technology) => (
               <TechBadge
                 key={tech}
@@ -42,7 +48,6 @@ export default function Home() {
               />
             ))}
           </div>
-
           <div className="flex gap-4">
             <a
               href={profile.links?.resume || "#"}

@@ -1,42 +1,100 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from "lucide-react"
 
+// Define TypeScript types
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+}
+
+type FormStatus = {
+  loading: boolean;
+  success: boolean;
+  error: boolean;
+  message: string;
+}
+
 export default function ContactForm() {
-  const [form, setForm] = useState({
+  // Form data state
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   })
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus("sending")
+  // Form status state
+  const [status, setStatus] = useState<FormStatus>({
+    loading: false,
+    success: false,
+    error: false,
+    message: '',
+  })
 
+  // Handle input changes
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    // Set loading state
+    setStatus({ loading: true, success: false, error: false, message: '' });
+    
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      })
-
+      // Send to API endpoint - update this to your correct endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
       if (response.ok) {
-        setStatus("sent")
-        setForm({ name: "", email: "", message: "" })
+        // Success state
+        setStatus({
+          loading: false,
+          success: true,
+          error: false,
+          message: 'Thank you for your message! I will get back to you soon.',
+        });
+        
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+        
+        // Auto-reset status after 5 seconds
+        setTimeout(() => {
+          setStatus({ loading: false, success: false, error: false, message: '' });
+        }, 5000);
       } else {
-        setStatus("error")
+        throw new Error(data.error || 'Failed to send message');
       }
     } catch (error) {
-      console.error("Error:", error)
-      setStatus("error")
+      // Error state
+      setStatus({
+        loading: false,
+        success: false,
+        error: true,
+        message: error instanceof Error ? error.message : 'An error occurred. Please try again later.',
+      });
+      
+      // Auto-reset error status after 5 seconds
+      setTimeout(() => {
+        setStatus({ loading: false, success: false, error: false, message: '' });
+      }, 5000);
     }
-  }
+  };
 
-  if (status === "sent") {
+  // Success view (when message is sent successfully)
+  if (status.success) {
     return (
       <div className="relative overflow-hidden rounded-xl">
         {/* Background gradient */}
@@ -56,7 +114,7 @@ export default function ContactForm() {
           </p>
 
           <button
-            onClick={() => setStatus("idle")}
+            onClick={() => setStatus({ loading: false, success: false, error: false, message: '' })}
             className="mt-6 px-5 py-2 bg-white text-gray-700 rounded-lg border border-gray-200 hover:bg-gray-50 shadow-sm transition-colors text-sm font-medium"
           >
             Send another message
@@ -66,6 +124,7 @@ export default function ContactForm() {
     )
   }
 
+  // Main form view
   return (
     <div className="relative overflow-hidden rounded-xl">
       {/* Background gradient */}
@@ -85,8 +144,9 @@ export default function ContactForm() {
                 <input
                   type="text"
                   id="name"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   className="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-all shadow-sm group-hover:shadow-md"
                   placeholder="Your name"
@@ -105,8 +165,9 @@ export default function ContactForm() {
                 <input
                   type="email"
                   id="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                   className="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-all shadow-sm group-hover:shadow-md"
                   placeholder="your.email@example.com"
@@ -125,8 +186,9 @@ export default function ContactForm() {
               </div>
               <textarea
                 id="message"
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 required
                 rows={5}
                 className="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent transition-all shadow-sm group-hover:shadow-md resize-none"
@@ -138,11 +200,11 @@ export default function ContactForm() {
           <div className="pt-2">
             <button
               type="submit"
-              disabled={status === "sending"}
+              disabled={status.loading}
               className="relative w-full px-6 py-3.5 bg-gray-900 text-white rounded-lg hover:bg-black disabled:opacity-80 disabled:cursor-not-allowed transition-all duration-300 text-sm font-medium shadow-sm hover:shadow-md overflow-hidden group"
             >
               <div className="relative z-10 flex justify-center items-center gap-2">
-                {status === "sending" ? (
+                {status.loading ? (
                   <>
                     <svg
                       className="animate-spin h-5 w-5 text-white"
@@ -177,7 +239,7 @@ export default function ContactForm() {
             </button>
           </div>
 
-          {status === "error" && (
+          {status.error && (
             <div className="relative overflow-hidden rounded-lg mt-4">
               <div className="absolute inset-0 bg-gradient-to-r from-red-50 to-rose-50 opacity-70"></div>
               <div className="relative z-10 p-4 flex items-center gap-3">
@@ -186,7 +248,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="font-medium text-red-700">Message could not be sent</p>
-                  <p className="text-sm text-red-600">Please try again later or contact me directly.</p>
+                  <p className="text-sm text-red-600">{status.message || 'Please try again later or contact me directly.'}</p>
                 </div>
               </div>
             </div>
