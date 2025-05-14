@@ -228,7 +228,7 @@ export default function AboutPage() {
 
 
       {/* Disqus comments */}
-      <div className="border-t border-gray-100 max-w-4xl mx-auto">
+      {/* <div className="border-t border-gray-100 max-w-4xl mx-auto">
       <section className="mt-16">
         <h2 className="text-2xl font-bold mb-6">Comments</h2>
         <DisqusComments 
@@ -237,7 +237,7 @@ export default function AboutPage() {
           title="About Me"
         />
       </section>
-      </div>
+      </div> */}
     </main>
   );
 }
