@@ -25,8 +25,6 @@ export default function Home() {
               priority
             />
           </div>
-          
-
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">{profile.name}</h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-6 font-light">{profile.title}</p>
           <p className="text-gray-700 max-w-2xl mx-auto text-center leading-relaxed mb-2">{profile.description}</p>
