@@ -13,7 +13,7 @@ export const experience: ExperienceItem[] = [
     description: [
       "Building 14+ machine learning, ai-engineering and full-stack projects in fast-paced software team environments ",
       "Developing 5+ neural networks in Python, 11 apps in Typescript on AWS/Vercel with dev and production environment",
-      "Implemented llm-chaning, hyperparameter tuning, fine tuning on 10+ LLM models controlling for latency & accuracy",
+      "Implementing llm-chaning, hyperparameter tuning, fine tuning on 10+ LLM models controlling for latency & accuracy",
       "Optimizing application performance with lazy loading and code splitting, and deploying to Vercel with CI/CD pipeline",
     ],
     skills: [
