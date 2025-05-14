@@ -2,13 +2,44 @@ import { ExperienceItem, Technology } from "../types";
 import CodePathLogo from "../public/images/codepathlogo.jpg";
 import HunterLogo from "../public/images/HunterCollege.jpg";
 import EvergreenLogo from "../public/images/evergreen-logo.jpg";
-
+import HeadstarterLogo from "../public/images/headstarter.jpeg";
 export const experience: ExperienceItem[] = [
   {
     id: "experience1",
+    role: "Software Engineering Resident",
+    company: "Headstarter",
+    period: "May 2025 - Present",
+    logo: HeadstarterLogo,
+    description: [
+      "Building 14+ machine learning, ai-engineering and full-stack projects in fast-paced software team environments ",
+      "Developing 5+ neural networks in Python, 11 apps in Typescript on AWS/Vercel with dev and production environment",
+      "Implemented llm-chaning, hyperparameter tuning, fine tuning on 10+ LLM models controlling for latency & accuracy",
+      "Optimizing application performance with lazy loading and code splitting, and deploying to Vercel with CI/CD pipeline",
+    ],
+    skills: [
+      "typescript",
+      "python",
+      "vercel",
+      "git",
+      "docker",
+      "awslambda"
+    ] as Technology[],
+    location: {
+      city: "New York",
+      country: "USA",
+    },
+    links: {
+      companyWebsite: "https://hunter.cuny.edu",
+      projectLink: "https://github.com/yourusername/hunter-events-platform",
+    },
+    metrics: [
+    ]
+  },
+  {
+    id: "experience2",
     role: "Web Development Intern",
     company: "CUNY Hunter College",
-    period: "Jan 2025 - Present",
+    period: "Jan 2025 - May 2025",
     logo: HunterLogo,
     description: [
       "Designing and implementing responsive UI components with React and styled with TailwindCSS, ensuring WCAG 2.1 accessibility compliance",
@@ -35,7 +66,7 @@ export const experience: ExperienceItem[] = [
     metrics: []
   },
   {
-    id: "experience2",
+    id: "experience3",
     role: "Software Engineering Intern",
     company: "Evergreen Investments",
     period: "June 2024 - Dec 2024",
@@ -66,7 +97,7 @@ export const experience: ExperienceItem[] = [
     metrics: []
   },
   {
-    id: "experience3",
+    id: "experience4",
     role: "Advanced Web Development Mentee",
     company: "CodePath",
     period: "Aug 2023 - Jan 2024",
