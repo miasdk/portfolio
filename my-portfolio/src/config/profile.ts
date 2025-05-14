@@ -5,7 +5,7 @@ export const profile: Profile = {
     name: "Mia Elena",
     title: "Software Engineer",
     description: "Passionate about building impactful software solutions.",
-    image: profilePicture2,
+    image: profilePicture,
     links: {
         github: "https://github.com/miasdk",
         linkedIn: "https://www.linkedin.com/in/miaelena/",
