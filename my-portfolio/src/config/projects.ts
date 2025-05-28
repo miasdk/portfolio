@@ -1,5 +1,5 @@
 import { Project, Technology } from "../types/index";
-import project1 from "../public/images/eCart1.jpg";
+import project1 from "../public/images/ecart-homepage2.png";
 import project2 from "../public/images/portfolio.jpg";
 
 export const projects: Project[] = [
