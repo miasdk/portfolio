@@ -32,9 +32,9 @@ export default function Home() {
           <img
           src="https://raw.githubusercontent.com/miaskyelena/contribution_snk/output/github-contribution-grid-snake.svg"
           alt="GitHub Contribution Snake"
-          className="mx-auto w-full max-w-lg mb-2 "
+          className="mx-auto w-full max-w-lg mb-5 "
           />
-           <div className="flex flex-wrap justify-center gap-3 mb-10">
+           {/* <div className="flex flex-wrap justify-center gap-3 mb-10">
             {profile.skills.map((tech: Technology) => (
               <TechBadge
                 key={tech}
@@ -45,7 +45,7 @@ export default function Home() {
                 className="hover:drop-shadow-xl hover:scale-110 transition-all duration-300"
               />
             ))}
-          </div>
+          </div> */}
           <div className="flex gap-4">
             <a
               href={profile.links?.resume || "#"}
