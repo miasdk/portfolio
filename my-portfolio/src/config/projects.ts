@@ -6,15 +6,15 @@ export const projects: Project[] = [
   {
     id: "project1",
     title: "E-commerce Platform",
-    description: "Full-stack application with Stripe payment integration, Firebase authentication, and PostgreSQL database. Built responsive UI with React and Tailwind CSS featuring product catalog and cart functionality.",
+    description: "Production-ready e-commerce platform featuring 25+ documented REST API endpoints, advanced PostgreSQL full-text search, and interactive Swagger documentation. Implements enterprise-level architecture with Firebase authentication, Stripe payment processing, and optimized database queries. Deployed on Vercel/Railway with comprehensive CI/CD pipeline.",
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
-    date: "04/2025",
+    date: "06/2025",
     links: {
       github: "https://github.com/miasdk/Vite-Ecommerce-Template",
+      demo: "https://e-cart-mu-olive.vercel.app/"
     },
     image: project1,
     meta: {
-      isWIP: true,
       isTeamProject: false,
       isFeatured: true,
     },
