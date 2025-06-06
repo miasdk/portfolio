@@ -13,9 +13,10 @@ export const profile: Profile = {
     },
     skills: [
         "typescript",
-        "react",
+        "react", 
         "nextjs",
-        "supabase",
+        "python",
+        "firebase"
     ] as Technology[],
     contact: {
         email: "miatapiaswe@gmail.com",

@@ -34,18 +34,18 @@ export default function Home() {
           alt="GitHub Contribution Snake"
           className="mx-auto w-full max-w-lg mb-5 "
           />
-           {/* <div className="flex flex-wrap justify-center gap-3 mb-10">
+           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {profile.skills.map((tech: Technology) => (
               <TechBadge
                 key={tech}
                 tech={tech}
-                size="xl"
+                size="md"
                 showLabel={false}
                 showbg={false}
                 className="hover:drop-shadow-xl hover:scale-110 transition-all duration-300"
               />
             ))}
-          </div> */}
+          </div>
           <div className="flex gap-4">
             <a
               href={profile.links?.resume || "#"}
