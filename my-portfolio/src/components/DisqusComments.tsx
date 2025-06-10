@@ -9,13 +9,11 @@ interface DisqusCommentsProps {
 
 export default function DisqusComments({ pageIdentifier, pageUrl, title }: DisqusCommentsProps) {
   useEffect(() => {
-    // Add Disqus script
     const script = document.createElement('script');
     script.src = 'https://miaelena.disqus.com/embed.js';
     script.setAttribute('data-timestamp', Date.now().toString());
     script.async = true;
     
-    // Configure Disqus
     (window as any).disqus_config = function() {
       this.page.url = pageUrl;
       this.page.identifier = pageIdentifier;
@@ -26,7 +24,6 @@ export default function DisqusComments({ pageIdentifier, pageUrl, title }: Disqu
     
     document.body.appendChild(script);
     
-    // Cleanup on unmount
     return () => {
       const disqusThread = document.getElementById('disqus_thread');
       if (disqusThread) {

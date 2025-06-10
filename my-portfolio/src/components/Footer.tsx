@@ -3,6 +3,8 @@ import { FaGithub, FaLinkedin, FaHeart } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
+    const currentYear = 2025; 
+    
     return (
         <footer className="py-8 bg-gray-900 text-white">
             <div className="container mx-auto flex justify-between items-center px-4">
@@ -11,7 +13,7 @@ export default function Footer() {
                         Made with <FaHeart className="inline text-red-500" /> by {profile.name}
                     </p>
                     
-                    &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
+                    &copy; {currentYear} {profile.name}. All rights reserved.
                 </div>
                 <div className="flex space-x-4">
                     <a href={profile.links?.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">

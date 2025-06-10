@@ -83,7 +83,6 @@ export default function Home() {
               const featuredProjects = projects.filter((project) => project.meta?.isFeatured);
               const projectCount = featuredProjects.length;
               
-              // Determine the appropriate grid class based on project count
               const xlGridClass = projectCount >= 4 && projectCount % 4 === 0 
                 ? "xl:grid-cols-4" 
                 : "xl:grid-cols-3";
@@ -94,7 +93,6 @@ export default function Home() {
                     <div
                       key={project.id}
                       className={`${
-                        // If it's the last project and the total number of projects is odd
                         index === array.length - 1 && array.length % 2 !== 0
                           ? "sm:col-span-2 lg:col-span-1"
                           : ""

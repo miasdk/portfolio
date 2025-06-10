@@ -30,17 +30,13 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
 
   return (
     <article className="group relative rounded-xl overflow-hidden">
-      {/* Card wrapper with enhanced shadow and border */}
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray-50 via-white to-gray-50 shadow-md group-hover:shadow-lg transition-all duration-300"></div>
 
       <div className="relative z-10 flex flex-col h-full">
-        {/* Timeline indicator */}
         <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-        {/* Header section */}
         <header className="p-6 pb-4">
           <div className="flex items-start gap-5">
-            {/* Logo or icon */}
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-100 rounded-lg blur opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
               <div className="relative flex-shrink-0 p-3 bg-white rounded-lg shadow-sm border border-gray-100 group-hover:border-gray-200 transition-all duration-300">
@@ -78,7 +74,6 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           </div>
         </header>
 
-        {/* Description section */}
         <div className="px-6 pb-4 pl-16">
           <ul className="space-y-3">
             {description.map((item, i) => (
@@ -92,7 +87,6 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           </ul>
         </div>
 
-        {/* Metrics section */}
         {metrics && metrics.length > 0 && (
           <div className="px-6 pb-6 pl-16">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-2">
@@ -111,7 +105,6 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           </div>
         )}
 
-        {/* Technologies section */}
         <div className="mt-auto pt-4 px-6 pb-6 bg-gradient-to-r from-gray-50 to-white border-t border-gray-200">
           <h4 className="text-xs font-medium text-gray-600 mb-3 flex items-center">
             <span className="inline-block w-8 h-px bg-gray-300 mr-2"></span>

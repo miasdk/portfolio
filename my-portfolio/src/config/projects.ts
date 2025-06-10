@@ -10,7 +10,7 @@ export const projects: Project[] = [
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
     date: "01/2025",
     lastUpdated: "2025-06-06",
-    status: "complete", // Add status
+    status: "complete", 
     links: {
       github: "https://github.com/miasdk/Vite-Ecommerce-Template",
       demo: "https://e-cart-mu-olive.vercel.app/"
@@ -19,6 +19,7 @@ export const projects: Project[] = [
     meta: {
       isTeamProject: false,
       isFeatured: true,
+      isFullStack: true,
     },
   },
   {
@@ -27,8 +28,8 @@ export const projects: Project[] = [
     description: "Performance-optimized portfolio built with Next.js and TypeScript. Features SEO-friendly server-side rendering, responsive design, and custom component library for consistent UI/UX.",
     technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
     date: "04/2025",
-    lastUpdated: "2025-06-06",
-    status: "complete", // Add status
+    lastUpdated: "2025-06-10",
+    status: "complete", 
     links: {
       github: "https://github.com/miasdk/Portfolio",
       demo: "https://miaelena.vercel.app/"
@@ -40,48 +41,45 @@ export const projects: Project[] = [
     platforms: ["web", "mobile"]
   },
   {
-    id: "project3",
-    title: "AI Application",
-    description: "AI-driven web application utilizing OpenAI API for natural language processing. Features user authentication, data visualization, and responsive design.",
-    technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
-    date: "2025",
-    lastUpdated: "2024-12-15",
-    status: "in-progress", // Add status
-    links: {
-      github: "https://github.com/yourname/portfolio",
-    },
-    image: "https://images.unsplash.com/photo-1466781783364-36c955e42a7f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    meta: {
-      isWIP: true,
-      isFeatured: true,   
-      isAI: true,
-     },
-    platforms: ["web", "mobile"]
+  id: "project3",
+  title: "Multimodal Video Analysis",
+  description: "Advanced AI platform combining visual and audio understanding for intelligent video conversations. Built with Google Gemini Pro Vision, featuring multimodal RAG architecture, real-time WebSocket processing, and vector database integration with ChromaDB. Implements intelligent video sectioning, timestamp citations, and natural language visual content search.",
+  technologies: ["python", "react", "typescript", "fastapi", "tailwindcss", "postgresql"],
+  date: "06/2025",
+  lastUpdated: "2025-06-10",
+  status: "in-progress",
+  links: {
+    github: "https://github.com/miasdk/multimodal-video-analysis",
+    // demo: "https://multimodal-video-analysis.vercel.app/" // Add when deployed
   },
-  {
-    id: "project4",
-    title: "Weather Dashboard",
-    description: "Interactive weather visualization platform integrating multiple API data sources. Built with React and D3.js for responsive charts and geolocation features.",
-    technologies: [
-      "typescript",
-      "javascript",
-      "react",
-      "nextjs",
-      "tailwindcss",
-    ],
-    date: "2023",
-    lastUpdated: "2024-11-20",
-    status: "planning", // Add status
-    links: {
-      github: "https://github.com/yourname/portfolio",
-      demo: "https://yourportfolio.com"
-    },
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    meta: {
-      isWIP: true,
-      isTeamProject: true,
-   
-    },
-    platforms: ["web", "mobile"]
+  image: "https://images.unsplash.com/photo-1710993011904-8f1162b9806d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  meta: {
+    isWIP: true,
+    isFeatured: true,
+    isAI: true,
+    isTeamProject: false,
   },
+  platforms: ["web", "mobile"]
+},
+{
+id: "project4",
+title: "Sales Analytics Platform",
+description: "Business intelligence platform with ML-powered sales forecasting, customer segmentation, and interactive dashboards. Processes 100K+ transactions with 85%+ prediction accuracy using Python, PostgreSQL, and Streamlit.",
+technologies: ["python", "postgresql", "streamlit", "scikit-learn", "pandas", "plotly"],
+date: "06/2025",
+lastUpdated: "2025-06-10",
+status: "in-progress",
+links: {
+  github: "https://github.com/miasdk/sales-analytics-platform",
+  // demo: "https://sales-analytics-platform.streamlit.app/" // Add when deployed
+},
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Business analytics/dashboard themed image
+meta: {
+  isWIP: true,
+  isFeatured: true,
+  isDataScience: true,
+  isTeamProject: false,
+},
+platforms: ["web"]
+}
 ];

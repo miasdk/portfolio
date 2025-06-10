@@ -3,6 +3,7 @@ import CodePathLogo from "../public/images/codepathlogo.jpg";
 import HunterLogo from "../public/images/HunterCollege.jpg";
 import EvergreenLogo from "../public/images/evergreen-logo.jpg";
 import HeadstarterLogo from "../public/images/headstarter.jpeg";
+
 export const experience: ExperienceItem[] = [
   {
     id: "experience1",
@@ -11,10 +12,10 @@ export const experience: ExperienceItem[] = [
     period: "May 2025 - Present",
     logo: HeadstarterLogo,
     description: [
-      "Building 14+ machine learning, ai-engineering and full-stack projects in fast-paced software team environments ",
-      "Developing 5+ neural networks in Python, 11 apps in Typescript on AWS/Vercel with dev and production environment",
-      "Implementing llm-chaning, hyperparameter tuning, fine tuning on 10+ LLM models controlling for latency & accuracy",
-      "Optimizing application performance with lazy loading and code splitting, and deploying to Vercel with CI/CD pipeline",
+      "Building multiple machine learning, AI-engineering and full-stack projects in fast-paced collaborative team environments",
+      "Developing neural networks in Python and TypeScript applications deployed on AWS and Vercel with staging and production environments",
+      "Implementing LLM integration, hyperparameter tuning, and fine-tuning across various language models with focus on performance optimization",
+      "Optimizing application performance through lazy loading, code splitting, and automated CI/CD deployment pipelines"
     ],
     skills: [
       "typescript",
@@ -29,11 +30,10 @@ export const experience: ExperienceItem[] = [
       country: "USA",
     },
     links: {
-      companyWebsite: "https://hunter.cuny.edu",
-      projectLink: "https://github.com/yourusername/hunter-events-platform",
+      companyWebsite: "https://headstarter.co", 
+      projectLink: "https://github.com/miatapia/headstarter-projects",
     },
-    metrics: [
-    ]
+    metrics: []
   },
   {
     id: "experience2",
@@ -42,10 +42,10 @@ export const experience: ExperienceItem[] = [
     period: "Jan 2025 - May 2025",
     logo: HunterLogo,
     description: [
-      "Designing and implementing responsive UI components with React and styled with TailwindCSS, ensuring WCAG 2.1 accessibility compliance",
-      "Building secure user authentication system and real-time database functionalities with Firebase",
-      "Developing comprehensive client-side form validation with error handling to enhance user experience",
-      "Optimizing application performance with lazy loading and code splitting, and deploying to Vercel with CI/CD pipeline"
+      "Designed and implemented responsive UI components with React and TailwindCSS, ensuring WCAG 2.1 accessibility compliance",
+      "Built secure user authentication system and real-time database functionalities with Firebase integration",
+      "Developed comprehensive client-side form validation with enhanced error handling for improved user experience",
+      "Optimized application performance with lazy loading and code splitting, deploying via automated CI/CD pipeline to Vercel"
     ],
     skills: [
       "typescript",
@@ -61,25 +61,25 @@ export const experience: ExperienceItem[] = [
     },
     links: {
       companyWebsite: "https://hunter.cuny.edu",
-      projectLink: "https://github.com/yourusername/hunter-events-platform",
+      projectLink: "https://github.com/miatapia/hunter-web-platform",
     },
     metrics: []
   },
   {
     id: "experience3",
-    role: "Software Engineering Intern",
+    role: "Software Engineering Intern", 
     company: "Evergreen Investments",
     period: "June 2024 - Dec 2024",
     logo: EvergreenLogo,
     description: [
-      "Architected and implemented secure user authentication system with role-based access control, enhancing data protection",
-      "Collaborated with UX/UI designers to create intuitive interfaces that improved user experience",
-      "Implemented comprehensive unit and integration testing with Jest and React Testing Library",
+      "Architected and implemented secure user authentication system with role-based access control for enhanced data protection",
+      "Engineered portfolio management features and collaborated with UX/UI designers to create intuitive client interfaces",
+      "Implemented comprehensive unit and integration testing suite using Jest and React Testing Library with high code coverage",
       "Contributed to agile development processes including daily stand-ups, sprint planning, and retrospectives"
     ],
     skills: [
       "react",
-      "nodejs",
+      "nodejs", 
       "typescript",
       "git",
       "firebase",
@@ -92,7 +92,7 @@ export const experience: ExperienceItem[] = [
     },
     links: {
       companyWebsite: "https://evergreeninvestments.com",
-      projectLink: "https://github.com/yourusername/evergreen-projects",
+      projectLink: "https://github.com/miatapia/evergreen-portfolio-system",
     },
     metrics: []
   },
@@ -100,17 +100,17 @@ export const experience: ExperienceItem[] = [
     id: "experience4",
     role: "Advanced Web Development Mentee",
     company: "CodePath",
-    period: "Aug 2023 - Jan 2024",
+    period: "Aug 2023 - Jan 2024", 
     logo: CodePathLogo,
     description: [
-      "Developed multiple full-stack web applications utilizing React, Next.js, and TypeScript in a rigorous industry-focused program",
-      "Created and consumed RESTful APIs with Express.js, integrating third-party services to enhance application functionality",
-      "Collaborated with peers on group projects using Git for version control and agile methodologies",
-      "Applied web security best practices and performance optimization techniques across all projects"
+      "Developed multiple full-stack web applications utilizing React, Next.js, and TypeScript in rigorous industry-focused program",
+      "Created and consumed RESTful APIs with Express.js, integrating third-party services for enhanced application functionality",
+      "Collaborated on group projects using Git version control and agile methodologies in team-based development environment",
+      "Applied web security best practices and performance optimization techniques across all project implementations"
     ],
     skills: [
       "javascript",
-      "react",
+      "react", 
       "nextjs",
       "nodejs",
       "express",
@@ -125,21 +125,8 @@ export const experience: ExperienceItem[] = [
     },
     links: {
       companyWebsite: "https://codepath.org",
-      projectLink: "https://github.com/yourusername/codepath-advanced-web",
+      projectLink: "https://github.com/miatapia/codepath-web-development",
     },
-    metrics: [
-      {
-        value: "100%",
-        label: "Course Completion"
-      },
-      {
-        value: "5+",
-        label: "Web Apps Built"
-      },
-      {
-        value: "Top 10%",
-        label: "Graduating Class"
-      }
-    ]
+    metrics: []
   },
 ];

@@ -31,6 +31,12 @@ import {
   SiCplusplus,
   SiRailway,
   SiBootstrap,
+  SiFastapi,
+  SiStreamlit,
+  SiScikitlearn,
+  SiPandas,
+  SiPlotly,
+  SiNumpy
 } from 'react-icons/si';
 import { Technology } from '../types';
 
@@ -106,6 +112,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   swift: "frontend",
   jest: "frontend",
   bootstrap: "frontend",
+  plotly: "frontend",
   
   // Backend Technologies
   nodejs: "backend",
@@ -116,6 +123,11 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   mongodb: "backend",
   firebase: "backend",
   supabase: "backend",
+  fastapi: "backend",
+  streamlit: "backend",
+  "scikit-learn": "backend",
+  pandas: "backend",
+  numpy: "backend",
 
   
   // Infrastructure Technologies
@@ -245,6 +257,11 @@ const brandTechData = {
     color: "bg-[#3ecf8e] text-white",
     label: "Supabase",
   },
+  fastapi: {
+  icon: SiFastapi,
+  color: "bg-[#009688] text-white",
+  label: "FastAPI",
+  },
   
   // Infrastructure
   git: {
@@ -281,6 +298,33 @@ const brandTechData = {
     icon: SiRailway,
     color: "bg-[#ff5c00] text-white",
     label: "Railway",
+  },
+
+  // Data Science & Analytics
+  streamlit: {
+    icon: SiStreamlit,
+    color: "bg-[#ff4b4b] text-white",
+    label: "Streamlit",
+  },
+  "scikit-learn": {
+    icon: SiScikitlearn,
+    color: "bg-[#f7931e] text-white", 
+    label: "scikit-learn",
+  },
+  pandas: {
+    icon: SiPandas,
+    color: "bg-[#150458] text-white",
+    label: "pandas",
+  },
+  numpy: {
+    icon: SiNumpy,
+    color: "bg-[#013243] text-[#4dabcf]",
+    label: "NumPy",
+  },
+  plotly: {
+    icon: SiPlotly,
+    color: "bg-[#3f4f75] text-white",
+    label: "Plotly",
   },
 } satisfies Record<Technology, { icon: IconType; color?: string; label: string }>;
 

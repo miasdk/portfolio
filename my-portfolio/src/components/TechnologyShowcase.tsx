@@ -6,7 +6,6 @@ import ColorSchemeToggle from "./ColorSchemeToggle"
 import { Code, Database, Settings } from "lucide-react"
 import type { Technology, ColorScheme } from "../types"
 
-// Category configurations
 const categories = {
   frontend: {
     title: "Frontend Development",

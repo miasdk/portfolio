@@ -10,7 +10,6 @@ interface ProjectCardProps {
   className?: string
 }
 
-// Helper function to format dates nicely
 function formatRelativeDate(dateString: string): string {
   const date = new Date(dateString);
   const now = new Date();
@@ -42,14 +41,11 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
               priority={project.meta?.isFeatured}
             />
 
-            {/* Project status badges */}
             <div className="absolute top-3 right-3 z-20 flex flex-col gap-2 items-end">
-              {/* Status Badge */}
               {project.status && (
                 <StatusBadge status={project.status} size="sm" />
               )}
               
-              {/* Legacy WIP badge (if no status is set) */}
               {project.meta?.isWIP && !project.status && (
                 <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 shadow-sm">
                   In Progress
@@ -57,7 +53,6 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
               )}
             </div>
 
-            {/* Quick action buttons that appear on hover */}
             <div className="absolute bottom-3 right-3 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
               {project.links?.github && (
                 <Link
@@ -128,6 +123,11 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
             )}
             {project.meta?.isAI && (
               <span className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-md font-medium">AI Enhanced</span>
+            )}
+            {project.meta?.isDataScience && (
+              <span className="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs rounded-md font-medium">
+                Data Science
+              </span>
             )}
           </div>
 

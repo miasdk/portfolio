@@ -30,17 +30,26 @@ export type Technology =
   | "cpp"
   | "railway"
   | "bootstrap"
+  | "fastapi"
+  | "streamlit"
+  | "scikit-learn"
+  | "pandas"
+  | "numpy"
+  | "plotly"
+
+  
+
+    
   ;
 
 export interface Project {
   // Core Properties
   id: string;
   title: string;
-  shortTitle?: string; // For compact displays (e.g. mobile)
+  shortTitle?: string; 
   description: string;
   technologies: Technology[];
   
-  // Media (optional)
   image?: string | StaticImageData; // Path to image (optional)
   videoUrl?: string; // For demo videos
   
@@ -48,13 +57,8 @@ export interface Project {
     | `${number}` // "YYYY";
     | `${number}/${number}`; // "MM/YYYY"
 
-  // NEW: Last updated field
-  lastUpdated?: string; // ISO date string (YYYY-MM-DD) or relative format
-
-  // NEW: Project status
+  lastUpdated?: string; 
   status?: "complete" | "in-progress" | "planning" | "on-hold" | "archived";
-
-  // Links (optional)
   links?: {
     github?: string;
     demo?: string;
@@ -72,6 +76,8 @@ export interface Project {
     isTeamProject?: boolean; // Team collaboration flag
     isAI?: boolean; // AI/ML related
     isGame?: boolean; // Game development
+    isDataScience?: boolean; // Data science projects
+    isFullStack?: boolean; // Full-stack projects
   };
 
   // Platform Support 
