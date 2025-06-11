@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import TechBadge from "../components/TechBadge"
 import { projects } from "../config/projects"
 import { profile } from "../config/profile"
@@ -8,9 +9,12 @@ import ProjectCard from "../components/ProjectCard"
 import ExperienceCard from "../components/ExperienceCard"
 import ContactForm from "../components/ContactForm"
 import TechnologyShowcase from "../components/TechnologyShowcase"
-import { ArrowDown, FileText, Linkedin } from "lucide-react"
+import { ArrowDown, FileText, Linkedin, ArrowRight, FolderOpen } from "lucide-react"
 
 export default function Home() {
+  const featuredProjects = projects.filter((project) => project.meta?.isFeatured);
+  const totalProjects = projects.length;
+
   return (
     <main className="min-h-screen bg-white">
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden">
@@ -73,14 +77,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="py-20 px-10 bg-gray-50">
+      <section id="projects" className="py-16 px-10 bg-gray-50">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-2 text-center">Projects</h2>
-          <div className="w-20 h-1 bg-gray-900 mx-auto mb-12"></div>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-2">Projects</h2>
+            <div className="w-20 h-1 bg-gray-900 mx-auto mb-3"></div>
+           
+          </div>
           
           <div className="mx-auto max-w-screen-xl">
             {(() => {
-              const featuredProjects = projects.filter((project) => project.meta?.isFeatured);
               const projectCount = featuredProjects.length;
               
               const xlGridClass = projectCount >= 4 && projectCount % 4 === 0 
@@ -88,7 +94,7 @@ export default function Home() {
                 : "xl:grid-cols-3";
               
               return (
-                <div className={`grid grid-cols-1 sm:grid-cols-2  ${xlGridClass} gap-6`}>
+                <div className={`grid grid-cols-1 sm:grid-cols-2 ${xlGridClass} gap-6 mb-10`}>
                   {featuredProjects.map((project, index, array) => (
                     <div
                       key={project.id}
@@ -98,12 +104,26 @@ export default function Home() {
                           : ""
                       }`}
                     >
-                      <ProjectCard project={project} />
+                      <ProjectCard 
+                        project={project} 
+                        variant="grid"
+                      />
                     </div>
                   ))}
                 </div>
               );
             })()}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg shadow-sm hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 group"
+            >
+              <FolderOpen className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              <span>View All {totalProjects} Projects</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

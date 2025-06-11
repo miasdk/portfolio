@@ -35,12 +35,7 @@ export type Technology =
   | "scikit-learn"
   | "pandas"
   | "numpy"
-  | "plotly"
-
-  
-
-    
-  ;
+  | "plotly";
 
 export interface Project {
   // Core Properties
@@ -48,6 +43,7 @@ export interface Project {
   title: string;
   shortTitle?: string; 
   description: string;
+  shortDescription?: string; // Brief description for compact cards
   technologies: Technology[];
   
   image?: string | StaticImageData; // Path to image (optional)
@@ -85,10 +81,10 @@ export interface Project {
 }
 
 export interface Profile {
-    name: string;
-    title: string;
-    description: string;
-    image?: string | StaticImageData;
+  name: string;
+  title: string;
+  description: string;
+  image?: string | StaticImageData;
   links?: {
     github?: string;
     linkedIn?: string;
@@ -112,7 +108,12 @@ export interface ExperienceItem {
   role: string;
   company: string;
   period: string; // e.g., "Jan 2020 - Present"
-  description: string[]; 
+  
+  // Tiered content structure
+  summary: string; // Short 1-2 line overview for card view
+  highlights?: string[]; // 2-4 key bullet points for medium view
+  description: string[]; // Full detailed descriptions for expanded view
+  
   skills: Technology[]; // Technologies used
   logo?: string | StaticImageData; // Optional logo image
   links?: {
@@ -122,13 +123,20 @@ export interface ExperienceItem {
     github?: string;
   }
   location?: {
-    city?: string | string;
-    country?: string | string;
+    city?: string;
+    country?: string;
   };
   metrics?: {
     value: string; // e.g., "20%"
     label: string; // e.g., "Increased efficiency"
   }[];
+  
+  // Display preferences
+  displayOptions?: {
+    showMetrics?: boolean; // Whether to show metrics in card view
+    emphasizeSkills?: boolean; // Whether to prominently display tech stack
+    cardLayout?: "compact" | "standard" | "detailed"; // Default layout preference
+  };
 }
 
 export type ColorScheme = 'brand' | 'mono' | 'minimal';
