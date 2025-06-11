@@ -121,7 +121,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg shadow-sm hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 group"
             >
               <FolderOpen className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              <span>View All {totalProjects} Projects</span>
+              <span>View All  Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
