@@ -137,7 +137,7 @@ export default function ProjectCard({
         <div className={`${variant === "compact" ? "p-4" : "p-5"} flex-1 flex flex-col`}>
           <div className={`${variant === "compact" ? "mb-2" : "mb-3"}`}>
             <div className="flex items-center justify-between">
-              <h3 className={`${variant === "compact" ? "text-base" : "text-lg"} font-bold text-gray-900 group-hover:text-gray-700 transition-colors`}>
+              <h3 className={`${variant === "compact" ? "text-base" : "text-lg"} font-bold text-gray-900 group-hover:text-gray-700 transition-colors leading-tight`}>
                 <Link
                   href={project.links?.demo || project.links?.github || "#"}
                   target="_blank"
@@ -177,8 +177,8 @@ export default function ProjectCard({
           </div>
 
           {/* Expandable Description */}
-          <div className={`text-gray-600 ${variant === "compact" ? "text-xs" : "text-sm"} leading-relaxed ${variant === "compact" ? "mb-3" : "mb-4"}`}>
-            <p className="flex-grow">
+          <div className={`${variant === "compact" ? "mb-3" : "mb-4"}`}>
+            <p className={`text-gray-700 ${variant === "compact" ? "text-xs" : "text-sm"} leading-relaxed flex-grow`}>
               {isDescriptionExpanded ? project.description : getDescription()}
             </p>
             
@@ -225,7 +225,7 @@ export default function ProjectCard({
 
           {/* Expandable Technologies */}
           <div className={`mt-auto ${variant === "compact" ? "pt-2" : "pt-4"} border-t border-gray-100`}>
-            <h4 className="text-xs font-medium text-gray-500 mb-2">Technologies</h4>
+            <h4 className="text-xs font-semibold text-gray-700 mb-2 uppercase tracking-wide">Technologies</h4>
             <div className="flex flex-wrap gap-1.5">
               {displayedTechnologies.map((tech) => (
                 <TechBadge 
