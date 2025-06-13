@@ -9,7 +9,7 @@ export const projects: Project[] = [
     description: "Production-ready e-commerce platform featuring 25+ documented REST API endpoints, advanced PostgreSQL full-text search, and interactive Swagger documentation. Implements enterprise-level architecture with Firebase authentication, Stripe payment processing, and optimized database queries. Deployed on Vercel/Render with comprehensive CI/CD pipeline.",
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
     date: "01/2025",
-    lastUpdated: "2025-06-06",
+    lastUpdated: "2025-06-13",
     status: "complete", 
     links: {
       github: "https://github.com/miasdk/Vite-Ecommerce-Template",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     },
     image: project2,
     meta: {
-      isFeatured: true,
+
     },
     platforms: ["web", "mobile"]
   },
@@ -55,7 +55,7 @@ export const projects: Project[] = [
   image: "https://images.unsplash.com/photo-1710993011904-8f1162b9806d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   meta: {
     isWIP: true,
-    isFeatured: true,
+    isFeatured: false,
     isAI: true,
     isTeamProject: false,
   },
@@ -81,5 +81,35 @@ meta: {
   isTeamProject: false,
 },
 platforms: ["web"]
+},
+{
+id: "project5",
+title: "Healthcare Prior Auth AI: Automated Form Processing",
+shortTitle: "Prior Auth AI",
+description: "AI-powered pipeline for automating healthcare prior authorization form processing. Implements multimodal ML architecture for extracting and inferring patient data from medical documents, with intelligent form field mapping and conditional logic handling. Features OCR processing, PDF form analysis, and automated validation for insurance approval workflows.",
+technologies: [
+  "python",
+  "scikit-learn",
+  "pandas",
+  "numpy",
+  "fastapi",
+  "docker",
+  "awslambda"
+],
+date: "06/2025",
+lastUpdated: "2025-06-15",
+status: "in-progress",
+links: {
+  github: "https://github.com/miaelena/prior-auth-ai"
+},
+image: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+meta: {
+  isWIP: true,
+  isFeatured: true,
+  isAI: true,
+  isDataScience: true,
+  isTeamProject: false,
+},
+platforms: ["cli"]
 }
 ];

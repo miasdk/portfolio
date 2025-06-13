@@ -82,7 +82,6 @@ export default function Home() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-2">Projects</h2>
             <div className="w-20 h-1 bg-gray-900 mx-auto mb-3"></div>
-           
           </div>
           
           <div className="mx-auto max-w-screen-xl">

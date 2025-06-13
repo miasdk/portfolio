@@ -139,24 +139,12 @@ export default function ProjectCard({
             <div className="flex items-center justify-between">
               <h3 className={`${variant === "compact" ? "text-base" : "text-lg"} font-bold text-gray-900 group-hover:text-gray-700 transition-colors leading-tight`}>
                 <Link
-                  href={project.links?.demo || project.links?.github || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/projects/${project.id}`}
                   className="hover:underline decoration-2 underline-offset-2 transition-all"
                 >
                   {project.shortTitle || project.title}
                 </Link>
               </h3>
-              
-              {variant === "grid" && (
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-gray-100 rounded"
-                  aria-label={`View ${project.title} details`}
-                >
-                  <MoreHorizontal className="w-4 h-4 text-gray-500" />
-                </Link>
-              )}
             </div>
             
             {variant !== "compact" && (
@@ -271,7 +259,7 @@ export default function ProjectCard({
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium rounded-lg transition-colors"
                 >
-                  View Demo <ArrowUpRight className="w-3.5 h-3.5 ml-1.5" />
+                  Live Demo <ArrowUpRight className="w-3.5 h-3.5 ml-1.5" />
                 </Link>
               )}
               {project.links?.github && (
@@ -279,7 +267,7 @@ export default function ProjectCard({
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center justify-center px-4 py-2 border border-gray-300 hover:border-gray-400 text-gray-700 text-sm font-medium rounded-lg transition-colors ${project.links.demo ? "" : "flex-1"}`}
+                  className={`flex items-center justify-center px-4 py-2 border border-gray-300 hover:border-gray-400 text-gray-700 text-sm font-medium rounded-lg transition-colors ${!project.links.demo ? "flex-1" : ""}`}
                 >
                   <Github className="w-3.5 h-3.5 mr-1.5" /> Code
                 </Link>
