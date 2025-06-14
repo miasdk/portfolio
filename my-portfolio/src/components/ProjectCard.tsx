@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import TechBadge from "./TechBadge"
 import StatusBadge from "./StatusBadge"
-import { ArrowUpRight, Calendar, Github, Star, Clock, MoreHorizontal, ChevronDown, ChevronUp } from "lucide-react"
+import { ArrowUpRight, Calendar, Github, Star, Clock, MoreHorizontal, ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
 
 interface ProjectCardProps {
   project: Project
@@ -127,7 +127,7 @@ export default function ProjectCard({
                   className="p-2 rounded-full bg-white/90 text-gray-800 hover:bg-white hover:text-black transition-colors shadow-sm"
                   aria-label={`View live demo of ${project.title}`}
                 >
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4" />
                 </Link>
               )}
             </div>
