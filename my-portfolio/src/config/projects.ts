@@ -13,7 +13,7 @@ export const projects: Project[] = [
     status: "complete", 
     links: {
       github: "https://github.com/miasdk/Vite-Ecommerce-Template",
-      demo: "https://e-cart-mu-olive.vercel.app/"
+      demo: "https://ecartdemo.vercel.app/"
     },
     image: project1,
     meta: {
