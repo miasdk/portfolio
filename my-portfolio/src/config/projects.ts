@@ -83,33 +83,35 @@ meta: {
 platforms: ["web"]
 },
 {
-id: "project5",
-title: "Healthcare Prior Auth AI: Automated Form Processing",
-shortTitle: "Prior Auth AI",
-description: "AI-powered pipeline for automating healthcare prior authorization form processing. Implements multimodal ML architecture for extracting and inferring patient data from medical documents, with intelligent form field mapping and conditional logic handling. Features OCR processing, PDF form analysis, and automated validation for insurance approval workflows.",
-technologies: [
-  "python",
-  "scikit-learn",
-  "pandas",
-  "numpy",
-  "fastapi",
-  "docker",
-  "awslambda"
-],
-date: "06/2025",
-lastUpdated: "2025-06-15",
-status: "in-progress",
-links: {
-  github: "https://github.com/miaelena/prior-auth-ai"
-},
-image: "https://images.unsplash.com/photo-1603398938378-e54eab446dde?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-meta: {
-  isWIP: true,
-  isFeatured: true,
-  isAI: true,
-  isDataScience: true,
-  isTeamProject: false,
-},
-platforms: ["cli"]
+  id: "project5",
+  title: "Medical Referral Automation: AI-Powered Healthcare Processing",
+  shortTitle: "Medical Referral AI",
+  description: "Production-ready healthcare automation system that processes 30-50 page medical referrals using Mistral AI and generates insurance-specific prior authorization forms. Features intelligent document analysis, FHIR R4 compliance, provider matching algorithms, and risk stratification engine. Reduces processing time from weeks to minutes with high extraction accuracy.",
+  technologies: [
+    "python",
+    "react", 
+    "typescript",
+    "django",
+    "postgresql",
+    "docker",
+    "tailwindcss"
+  ],
+  date: "06/2025",
+  lastUpdated: "2025-06-30", // Update to current date
+  status: "complete", // Change from "in-progress" 
+  links: {
+    github: "https://github.com/yourusername/medical-referral-automation",
+    demo: "https://medical-referral-hub.vercel.app/" // Add your demo URL
+  },
+  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Medical/healthcare themed image
+  meta: {
+    isWIP: true, // Change from true
+    isFeatured: true,
+    isAI: true,
+    isFullStack: true, // Add this since you have frontend + backend
+    isHealthcare: true, // Add healthcare specialty tag
+    isTeamProject: false,
+  },
+  platforms: ["web", "cli"] // Both web interface and CLI
 }
 ];
