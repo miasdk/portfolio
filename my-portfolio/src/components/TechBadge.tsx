@@ -36,7 +36,8 @@ import {
   SiScikitlearn,
   SiPandas,
   SiPlotly,
-  SiNumpy
+  SiNumpy,
+  SiDjango
 } from 'react-icons/si';
 import { Technology } from '../types';
 
@@ -128,7 +129,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   "scikit-learn": "backend",
   pandas: "backend",
   numpy: "backend",
-
+  django: "backend",
   
   // Infrastructure Technologies
   git: "infra",
@@ -261,6 +262,11 @@ const brandTechData = {
   icon: SiFastapi,
   color: "bg-[#009688] text-white",
   label: "FastAPI",
+  },
+  django: {
+    icon: SiDjango,
+    color: "bg-[#092e20] text-white",
+    label: "Django",
   },
   
   // Infrastructure

@@ -40,78 +40,77 @@ export const projects: Project[] = [
     },
     platforms: ["web", "mobile"]
   },
-  {
-  id: "project3",
-  title: "Multimodal Video Analysis",
-  description: "Advanced AI platform combining visual and audio understanding for intelligent video conversations. Built with Google Gemini Pro Vision, featuring multimodal RAG architecture, real-time WebSocket processing, and vector database integration with ChromaDB. Implements intelligent video sectioning, timestamp citations, and natural language visual content search.",
-  technologies: ["python", "react", "typescript", "fastapi", "tailwindcss", "postgresql"],
-  date: "06/2025",
-  lastUpdated: "2025-06-10",
-  status: "in-progress",
-  links: {
-    github: "https://github.com/miasdk/multimodal-video-analysis",
-    // demo: "https://multimodal-video-analysis.vercel.app/" // Add when deployed
-  },
-  image: "https://images.unsplash.com/photo-1710993011904-8f1162b9806d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  meta: {
-    isWIP: true,
-    isFeatured: false,
-    isAI: true,
-    isTeamProject: false,
-  },
-  platforms: ["web", "mobile"]
-},
-{
-id: "project4",
-title: "Sales Analytics Platform",
-description: "Business intelligence platform with ML-powered sales forecasting, customer segmentation, and interactive dashboards. Processes 100K+ transactions with 85%+ prediction accuracy using Python, PostgreSQL, and Streamlit.",
-technologies: ["python", "postgresql", "streamlit", "scikit-learn", "pandas", "plotly"],
-date: "06/2025",
-lastUpdated: "2025-06-10",
-status: "in-progress",
-links: {
-  github: "https://github.com/miasdk/sales-analytics-platform",
-  // demo: "https://sales-analytics-platform.streamlit.app/" // Add when deployed
-},
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Business analytics/dashboard themed image
-meta: {
-  isWIP: true,
-  isFeatured: true,
-  isDataScience: true,
-  isTeamProject: false,
-},
-platforms: ["web"]
-},
+//   {
+//   id: "project3",
+//   title: "Multimodal Video Analysis",
+//   description: "Advanced AI platform combining visual and audio understanding for intelligent video conversations. Built with Google Gemini Pro Vision, featuring multimodal RAG architecture, real-time WebSocket processing, and vector database integration with ChromaDB. Implements intelligent video sectioning, timestamp citations, and natural language visual content search.",
+//   technologies: ["python", "react", "typescript", "fastapi", "tailwindcss", "postgresql"],
+//   date: "06/2025",
+//   lastUpdated: "2025-06-10",
+//   status: "in-progress",
+//   links: {
+//     github: "https://github.com/miasdk/multimodal-video-analysis",
+//     // demo: "https://multimodal-video-analysis.vercel.app/" // Add when deployed
+//   },
+//   image: "https://images.unsplash.com/photo-1710993011904-8f1162b9806d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//   meta: {
+//     isWIP: true,
+//     isFeatured: false,
+//     isAI: true,
+//     isTeamProject: false,
+//   },
+//   platforms: ["web", "mobile"]
+// },
+// {
+// id: "project4",
+// title: "Sales Analytics Platform",
+// description: "Business intelligence platform with ML-powered sales forecasting, customer segmentation, and interactive dashboards. Processes 100K+ transactions with 85%+ prediction accuracy using Python, PostgreSQL, and Streamlit.",
+// technologies: ["python", "postgresql", "streamlit", "scikit-learn", "pandas", "plotly"],
+// date: "06/2025",
+// lastUpdated: "2025-06-10",
+// status: "in-progress",
+// links: {
+//   github: "https://github.com/miasdk/sales-analytics-platform",
+//   // demo: "https://sales-analytics-platform.streamlit.app/" // Add when deployed
+// },
+// image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Business analytics/dashboard themed image
+// meta: {
+//   isWIP: true,
+//   isFeatured: true,
+//   isDataScience: true,
+//   isTeamProject: false,
+// },
+// platforms: ["web"]
+// },
 {
   id: "project5",
-  title: "Medical Referral Automation: AI-Powered Healthcare Processing",
-  shortTitle: "Medical Referral AI",
-  description: "Production-ready healthcare automation system that processes 30-50 page medical referrals using Mistral AI and generates insurance-specific prior authorization forms. Features intelligent document analysis, FHIR R4 compliance, provider matching algorithms, and risk stratification engine. Reduces processing time from weeks to minutes with high extraction accuracy.",
+  title: "Medical Referral Hub: AI-Powered Healthcare Automation",
+  shortTitle: "Medical Referral Hub",
+  description: "Full-stack healthcare automation system built with Django and React. Features intelligent document processing, provider matching algorithms, and FHIR R4 compliance. Demonstrates clean architecture with PostgreSQL, comprehensive audit trails, and production-ready deployment pipeline. Currently implementing AI integration with Mistral AI for automated referral analysis.",
   technologies: [
     "python",
-    "react", 
-    "typescript",
-    "django",
+    "django", 
     "postgresql",
-    "docker",
-    "tailwindcss"
+    "react",
+    "typescript",
+    "tailwindcss",
+    "docker"
   ],
   date: "06/2025",
-  lastUpdated: "2025-06-30", // Update to current date
-  status: "complete", // Change from "in-progress" 
+  lastUpdated: "2025-01-27", // Update to today's date
+  status: "in-progress", // Keep as in-progress since AI integration isn't complete
   links: {
-    github: "https://github.com/yourusername/medical-referral-automation",
-    demo: "https://medical-referral-hub.vercel.app/" // Add your demo URL
+    github: "https://github.com/miasdk/medical_referral_hub", // Update with your actual GitHub username
+    demo: "https://medical-referral-hub.vercel.app/" // Add when deployed
   },
-  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Medical/healthcare themed image
+  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   meta: {
-    isWIP: true, // Change from true
+    isWIP: true, // Keep as true since it's actively being developed
     isFeatured: true,
     isAI: true,
-    isFullStack: true, // Add this since you have frontend + backend
-    isHealthcare: true, // Add healthcare specialty tag
+    isFullStack: true,
     isTeamProject: false,
   },
-  platforms: ["web", "cli"] // Both web interface and CLI
+  platforms: ["web"]
 }
 ];

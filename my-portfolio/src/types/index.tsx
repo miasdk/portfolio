@@ -35,7 +35,8 @@ export type Technology =
   | "scikit-learn"
   | "pandas"
   | "numpy"
-  | "plotly";
+  | "plotly"
+  | "django";
 
 export interface Project {
   // Core Properties
