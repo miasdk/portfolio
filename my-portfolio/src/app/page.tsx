@@ -90,15 +90,25 @@ export default function Home() {
               
               const xlGridClass = projectCount >= 4 && projectCount % 4 === 0 
                 ? "xl:grid-cols-4" 
-                : "xl:grid-cols-3";
+                : projectCount === 3 
+                  ? "md:grid-cols-3"  // 3 columns from md+ for exactly 3 projects
+                  : "xl:grid-cols-3";
+              
+              // For 3 projects, use 1 column on small, 3 columns on md+
+              const gridClasses = projectCount === 3 
+                ? "grid-cols-1 md:grid-cols-3"
+                : `grid-cols-1 sm:grid-cols-2 ${xlGridClass}`;
+              
+              // Only apply 2+1 logic when we're using 2-column grid (not for 3 projects)
+              const shouldSpanLast = projectCount !== 3;
               
               return (
-                <div className={`grid grid-cols-1 sm:grid-cols-2 ${xlGridClass} gap-6 mb-10`}>
+                <div className={`grid ${gridClasses} gap-6 mb-10`}>
                   {featuredProjects.map((project, index, array) => (
                     <div
                       key={project.id}
                       className={`${
-                        index === array.length - 1 && array.length % 2 !== 0
+                        shouldSpanLast && index === array.length - 1 && array.length % 2 !== 0
                           ? "sm:col-span-2 lg:col-span-1"
                           : ""
                       }`}
