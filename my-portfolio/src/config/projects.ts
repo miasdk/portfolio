@@ -6,7 +6,7 @@ export const projects: Project[] = [
   {
     id: "project1",
     title: "E-commerce Platform",
-    description: "Production-ready e-commerce platform featuring 25+ documented REST API endpoints, advanced PostgreSQL full-text search, and interactive Swagger documentation. Built with scalable design patterns including Firebase authentication, Stripe payment processing, and optimized database queries. Deployed on Vercel/Render with comprehensive CI/CD pipeline.",
+    description: "Full-stack e-commerce platform featuring 25+ documented REST API endpoints, advanced PostgreSQL full-text search, and interactive Swagger documentation. Built with scalable design patterns including Firebase authentication, Stripe payment processing, and optimized database queries. Deployed on Vercel/Render with comprehensive CI/CD pipeline.",
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
     date: "01/2025",
     lastUpdated: "2025-06-16",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
 {
   id: "project5",
   title: "Medical Referral Hub: AI-Powered Healthcare Automation",
-  shortTitle: "Medical Referral Hub",
+  shortTitle: "AI Medical Referral Hub",
   description: "Full-stack healthcare automation system built with Django and React. Features intelligent document processing, provider matching algorithms, and FHIR R4 compliance. Demonstrates clean architecture with PostgreSQL, comprehensive audit trails, and production-ready deployment pipeline. Currently implementing AI integration with Mistral AI for automated referral analysis.",
   technologies: [
     "python",
