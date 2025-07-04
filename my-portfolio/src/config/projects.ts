@@ -25,7 +25,7 @@ export const projects: Project[] = [
   {
     id: "project2",
     title: "Portfolio",
-    description: "Performance-optimized portfolio built with Next.js and TypeScript. Features SEO-friendly server-side rendering, responsive design, and custom component library for consistent UI/UX.",
+    description: "Next.js portfolio featuring server-side rendering, responsive design, and custom component library for consistent UI/UX.",
     technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
     date: "04/2025",
     lastUpdated: "2025-06-10",
