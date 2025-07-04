@@ -1,10 +1,11 @@
 import { Profile, Technology } from "../types/index";
+import profilePicture from "../public/images/profile_transparent.jpg";
 
 export const profile: Profile = {
     name: "Mia Elena",
     title: "Software Engineer",
     description: "Passionate about building impactful software solutions.",
-    image: "/images/profile_transparent.jpg",
+    image: profilePicture,
     links: {
         github: "https://github.com/miasdk",
         linkedIn: "https://www.linkedin.com/in/miaelena/",
