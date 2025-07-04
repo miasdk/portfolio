@@ -28,7 +28,7 @@ export const projects: Project[] = [
     description: "Next.js portfolio featuring server-side rendering, responsive design, and custom component library for consistent UI/UX.",
     technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
     date: "04/2025",
-    lastUpdated: "2025-06-10",
+    lastUpdated: "2025-07-04",
     status: "complete", 
     links: {
       github: "https://github.com/miasdk/Portfolio",
@@ -97,11 +97,11 @@ export const projects: Project[] = [
     "docker"
   ],
   date: "06/2025",
-  lastUpdated: "2025-06-23", // Update to today's date
+  lastUpdated: "2025-07-04", // Update to today's date
   status: "in-progress", // Keep as in-progress since AI integration isn't complete
   links: {
     github: "https://github.com/miasdk/medical-referral-hub", // Update with your actual GitHub username
-    demo: "https://medical-referral-hub.vercel.app/" // Add when deployed
+    // demo: "https://medical-referral-hub.vercel.app/" // Add when deployed
   },
   image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   meta: {

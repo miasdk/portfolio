@@ -19,26 +19,21 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center px-4 overflow-hidden">
         <div className="container mx-auto relative z-10 flex flex-col items-center">
-          <div className="relative mb-8">
+          <div className="relative mb-4">
             <Image
               src={profile.image || "/default-profile.png"}
               alt={`${profile.name}'s profile picture`}
               width={180}
               height={180}
-              className="rounded-full object-cover relative border-4 border-white"
+              className="rounded-full object-cover"
               priority
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">{profile.name}</h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-6 font-light">{profile.title}</p>
-          <p className="text-gray-700 max-w-2xl mx-auto text-center leading-relaxed mb-2">{profile.description}</p>
+          <p className="text-gray-700 max-w-2xl mx-auto text-center leading-relaxed mb-6">{profile.description}</p>
           
-          <img
-          src="https://raw.githubusercontent.com/miaskyelena/contribution_snk/output/github-contribution-grid-snake.svg"
-          alt="GitHub Contribution Snake"
-          className="mx-auto w-full max-w-lg mb-5 "
-          />
-           <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
             {profile.skills.map((tech: Technology) => (
               <TechBadge
                 key={tech}
@@ -50,6 +45,13 @@ export default function Home() {
               />
             ))}
           </div>
+          
+          <img
+          src="https://raw.githubusercontent.com/miaskyelena/contribution_snk/output/github-contribution-grid-snake.svg"
+          alt="GitHub Contribution Snake"
+          className="mx-auto w-full max-w-lg mb-8"
+          />
+          
           <div className="flex gap-4">
             <a
               href={profile.links?.resume || "#"}
