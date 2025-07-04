@@ -36,7 +36,9 @@ export type Technology =
   | "pandas"
   | "numpy"
   | "plotly"
-  | "django";
+  | "django"
+  | "aws";
+  ;
 
 export interface Project {
   // Core Properties

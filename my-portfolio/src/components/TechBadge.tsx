@@ -39,6 +39,7 @@ import {
   SiNumpy,
   SiDjango
 } from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 import { Technology } from '../types';
 
 // ===================================
@@ -139,6 +140,7 @@ const techCategories: Record<Technology, keyof typeof monoColorScheme> = {
   docker: "infra",
   awslambda: "infra",
   railway: "infra",
+  aws: "infra",
 };
 
 // Original brand color tech data
@@ -304,6 +306,11 @@ const brandTechData = {
     icon: SiRailway,
     color: "bg-[#ff5c00] text-white",
     label: "Railway",
+  },
+  aws: {
+    icon: FaAws,
+    color: "bg-[#ff9900] text-black",
+    label: "AWS",
   },
 
   // Data Science & Analytics
