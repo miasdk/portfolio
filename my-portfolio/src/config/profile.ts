@@ -9,14 +9,18 @@ export const profile: Profile = {
     links: {
         github: "https://github.com/miasdk",
         linkedIn: "https://www.linkedin.com/in/miaelena/",
-        resume: "https://www.dropbox.com/scl/fi/apvvtjqsnv2via15zvufq/Mia-Elena-Tapia-SWE-Resume.pdf?rlkey=63sdhal4calzoax41jmsinc0e&st=5zqitucg&dl=0",
+        resume: "https://www.dropbox.com/scl/fi/1yivfsqvvqfk5j1zbwc47/Mia-Elena-Tapia-SWE-Resume-2.pdf?rlkey=itpd6r6gmrlruh06v03cmx9f1&st=n7e6xd7y&dl=0",
     },
     skills: [
-        "typescript",
-        "react", 
-        "nextjs",
         "python",
-        "firebase"
+        "django",
+        "postgresql",
+        "react",
+        "typescript",
+        "nextjs",
+        "docker",
+        "tailwindcss",
+        "awslambda"
     ] as Technology[],
     contact: {
         email: "miatapiaswe@gmail.com",

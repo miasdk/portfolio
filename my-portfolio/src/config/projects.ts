@@ -36,7 +36,7 @@ export const projects: Project[] = [
     },
     image: project2,
     meta: {
-
+      isFeatured: true,
     },
     platforms: ["web", "mobile"]
   },
@@ -97,13 +97,13 @@ export const projects: Project[] = [
     "docker"
   ],
   date: "06/2025",
-  lastUpdated: "2025-01-27", // Update to today's date
+  lastUpdated: "2025-06-23", // Update to today's date
   status: "in-progress", // Keep as in-progress since AI integration isn't complete
   links: {
-    github: "https://github.com/miasdk/medical_referral_hub", // Update with your actual GitHub username
+    github: "https://github.com/miasdk/medical-referral-hub", // Update with your actual GitHub username
     demo: "https://medical-referral-hub.vercel.app/" // Add when deployed
   },
-  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   meta: {
     isWIP: true, // Keep as true since it's actively being developed
     isFeatured: true,
