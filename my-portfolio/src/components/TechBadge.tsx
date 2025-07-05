@@ -412,7 +412,7 @@ export default function TechBadge({
 
   return (
     <span
-      className={`${baseClasses} ${colorClasses}`}
+      className={`${baseClasses} ${colorClasses} group relative`}
       role="img"
       aria-label={showLabel ? undefined : `${label} icon`}
     >
@@ -422,6 +422,13 @@ export default function TechBadge({
         </span>
       }
       {showLabel && <span>{label}</span>}
+      
+      {/* Tooltip - only show when label is hidden */}
+      {!showLabel && (
+        <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+          {label}
+        </span>
+      )}
     </span>
   );
 }
