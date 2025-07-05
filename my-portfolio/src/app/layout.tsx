@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mia Tapia | Full-Stack Developer",
+  title: "Mia Elena Ricci | Full-Stack Developer",
   description: "Software engineer specializing in React, Next.js, and TypeScript development",
 };
 

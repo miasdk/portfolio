@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div className="flex items-center space-x-2">
                     <Link href="/" className="text-xl font-bold text-gray-900">
-                        Mia E. Tapia
+                        Mia E. Ricci 
                     </Link>
                 </div>
 
