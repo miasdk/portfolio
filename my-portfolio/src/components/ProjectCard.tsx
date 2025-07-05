@@ -138,12 +138,18 @@ export default function ProjectCard({
           <div className={`${variant === "compact" ? "mb-2" : "mb-3"}`}>
             <div className="flex items-center justify-between">
               <h3 className={`${variant === "compact" ? "text-base" : "text-lg"} font-bold text-gray-900 group-hover:text-gray-700 transition-colors leading-tight`}>
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="hover:underline decoration-2 underline-offset-2 transition-all"
-                >
-                  {project.shortTitle || project.title}
-                </Link>
+                {project.links?.github ? (
+                  <Link
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline decoration-2 underline-offset-2 transition-all"
+                  >
+                    {project.shortTitle || project.title}
+                  </Link>
+                ) : (
+                  <span>{project.shortTitle || project.title}</span>
+                )}
               </h3>
             </div>
             

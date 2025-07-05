@@ -9,7 +9,7 @@ export const projects: Project[] = [
     description: "Full-stack e-commerce platform featuring 25+ documented REST API endpoints, advanced PostgreSQL full-text search, and interactive Swagger documentation. Built with scalable design patterns including Firebase authentication, Stripe payment processing, and optimized database queries. Deployed on Vercel/Render with comprehensive CI/CD pipeline.",
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
     date: "01/2025",
-    lastUpdated: "2025-06-16",
+    lastUpdated: "2025-07-05",
     status: "complete", 
     links: {
       github: "https://github.com/miasdk/Vite-Ecommerce-Template",
