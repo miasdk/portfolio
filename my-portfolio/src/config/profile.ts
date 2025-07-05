@@ -1,6 +1,5 @@
 import { Profile, Technology } from "../types/index";
-import profilePicture from "../public/images/my-notion-face-transparent (2) copy.png";
-
+import profilePicture from "../public/images/my-notion-face-transparent-glasses2.png";
 export const profile: Profile = {
     name: "Mia Elena",
     title: "Software Engineer",
@@ -9,7 +8,7 @@ export const profile: Profile = {
     links: {
         github: "https://github.com/miasdk",
         linkedIn: "https://www.linkedin.com/in/miaelena/",
-        resume: "https://www.dropbox.com/scl/fi/1yivfsqvvqfk5j1zbwc47/Mia-Elena-Tapia-SWE-Resume-2.pdf?rlkey=itpd6r6gmrlruh06v03cmx9f1&st=hsa672w8&dl=0",
+        resume: "https://www.dropbox.com/scl/fi/1yivfsqvvqfk5j1zbwc47/Mia-Elena-Tapia-SWE-Resume-2.pdf?rlkey=itpd6r6gmrlruh06v03cmx9f1&st=6ggpl8yb&dl=0",
     },
     skills: [
         "python",
