@@ -116,7 +116,7 @@ export default function AboutPage() {
           <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
             <h3 className="text-xl font-medium mb-4">My Development Journey</h3>
                          <p className="text-gray-700 leading-relaxed">
-               From learning React at CodePath to building production healthcare systems with Django and AI integration. 
+               From learning React at CodePath to building production healthcare systems with Django, my development journey has taught me the importance of constantly learning and adapting.
                Each experience has taught me something new: from design and accessibility, to developing comprehensive testing practices, 
                to now using Mistral AI and spaCy for clinical workflow automation in my medical referral project.
              </p>
