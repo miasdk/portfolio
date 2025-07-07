@@ -12,7 +12,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Mia Elena Ricci | Full-Stack Developer",
-  description: "Software engineer specializing in React, Next.js, and TypeScript development",
+  description: "Software engineer specializing in Python, Django, React, Next.js, and TypeScript development",
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({

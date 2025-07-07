@@ -24,9 +24,11 @@ export const experience: ExperienceItem[] = [
     
     // Detailed view - full technical descriptions
     description: [
-      "Built multiple applications including ML models and full-stack systems in collaborative team environment",
-      "Optimized application performance through caching, code splitting, and lazy loading techniques",
-      "Implemented LLM integration with hyperparameter tuning and deployment on AWS and Vercel"
+      "Built multiple applications including ML models and full-stack systems in collaborative team environment using Python and TypeScript",
+      "Developed and deployed web applications with React/Next.js frontend and Python backend services",
+      "Optimized application performance through caching, code splitting, and lazy loading techniques to improve user experience",
+      "Implemented LLM integration with hyperparameter tuning and deployment on AWS and Vercel with automated CI/CD pipelines",
+      "Collaborated with team members using Git version control and agile development methodologies"
     ],
     
     skills: [
@@ -66,8 +68,11 @@ export const experience: ExperienceItem[] = [
     ],
     
     description: [
-      "Designed WCAG 2.1 accessible React components with comprehensive form validation",
-      "Deployed applications with CI/CD ensuring reliable uptime; collaborated on technical architecture decisions"
+      "Designed WCAG 2.1 accessible React components with comprehensive form validation using TypeScript and modern React patterns",
+      "Built responsive web applications with TailwindCSS ensuring cross-browser compatibility and mobile-first design",
+      "Implemented client-side form validation with error handling and user feedback mechanisms",
+      "Deployed applications with CI/CD pipelines ensuring reliable uptime and automated testing",
+      "Collaborated on technical architecture decisions and participated in code reviews with development team"
     ],
     
     skills: [
@@ -107,8 +112,11 @@ export const experience: ExperienceItem[] = [
     ],
     
     description: [
-      "Engineered portfolio management features for client base, enhanced user experience and satisfaction",
-      "Implemented comprehensive testing suite with Jest; architected secure access control with role-based permissions"
+      "Engineered portfolio management features for client base using React and TypeScript, enhancing user experience and satisfaction",
+      "Developed responsive dashboard interfaces with real-time data visualization and interactive financial charts",
+      "Implemented comprehensive testing suite with Jest and React Testing Library including unit and integration tests",
+      "Architected secure access control with role-based permissions and authentication using Firebase and Node.js",
+      "Participated in agile development cycles with daily standups, sprint planning, and collaborative code reviews"
     ],
     
     skills: [
@@ -149,8 +157,11 @@ export const experience: ExperienceItem[] = [
     ],
     
     description: [
-      "Developed full-stack applications with React/Next.js; engaged in pair programming sessions",
-      "Created RESTful APIs with Express.js; applied performance optimization techniques"
+      "Developed full-stack applications with React/Next.js and TypeScript in intensive web development program",
+      "Created RESTful APIs with Express.js and Node.js, integrating third-party services and databases",
+      "Applied performance optimization techniques including code splitting, lazy loading, and efficient state management",
+      "Engaged in pair programming sessions and collaborative development using Git version control",
+      "Built responsive web applications with modern CSS frameworks and implemented web security best practices"
     ],
     
     skills: [
