@@ -75,8 +75,8 @@ export default function ProjectCard({
 
   const hiddenTechCount = project.technologies.length - getTechCount();
 
-  const showImage = variant === "grid" && project.image;
-  const imageHeight = variant === "grid" ? "h-40" : "h-52";
+  const showImage = project.image && variant !== "compact"; // Show images for all variants except compact
+  const imageHeight = variant === "detailed" ? "h-56 sm:h-64" : "h-48 sm:h-56"; // Responsive fixed heights
 
   return (
     <article className={`group relative h-full flex flex-col rounded-xl overflow-hidden bg-white ${className}`}>
@@ -84,13 +84,13 @@ export default function ProjectCard({
 
       <div className="relative flex flex-col h-full z-10">
         {showImage && (
-          <div className={`relative ${imageHeight} w-full flex-shrink-0 overflow-hidden`}>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+          <div className={`relative ${imageHeight} w-full flex-shrink-0 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200`}>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
             <Image
               src={project.image || "/placeholder.svg"}
               alt={`Screenshot of ${project.title}`}
               fill
-              className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority={project.meta?.isFeatured}
             />
