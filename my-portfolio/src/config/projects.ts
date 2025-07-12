@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: "Next.js portfolio featuring server-side rendering, responsive design, and custom component library for consistent UI/UX.",
     technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
     date: "04/2025",
-    lastUpdated: "2025-07-07",
+    lastUpdated: "2025-07-11",
     status: "complete", 
     links: {
       github: "https://github.com/miasdk/Portfolio",
