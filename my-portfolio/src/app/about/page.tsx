@@ -25,7 +25,7 @@ export default function AboutPage() {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 space-y-6">
+          <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
             <h1 className="text-3xl font-light tracking-wide">
               Hello, I'm <span className="font-medium">Mia</span> 👋
             </h1>
@@ -37,7 +37,7 @@ export default function AboutPage() {
               intuitive UX, I pride myself in my ability to tackle large, complex problems. 
             </p>
             
-            <div className="flex gap-5 pt-4">
+            <div className="flex gap-5 pt-4 justify-center md:justify-start">
               <Link 
                 href={profile.links?.github || "https://github.com"}
                 target="_blank"
@@ -110,15 +110,15 @@ export default function AboutPage() {
 
       {/* Tech Stack Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
-        <div>
-          <h3 className="text-xl font-medium mb-2">My Most Used Technologies</h3>
-          <p className="text-sm text-gray-600 mb-8">Dynamically generated from projects I've worked on</p>
+        <div className="text-center">
+          <h2 className="text-xl font-medium mb-2">My Most Used Technologies</h2>
+          <p className="text-sm text-gray-600 mb-12">Dynamically generated from projects I've worked on</p>
           <TechStackChart />
         </div>
 
         <div className="mt-16">
-          <h3 className="text-xl font-medium mb-8">Currently Learning</h3>
-          <div className="max-w-lg">
+          <h2 className="text-xl font-medium mb-8 text-center">Currently Learning</h2>
+          <div className="max-w-lg mx-auto">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
@@ -153,10 +153,10 @@ export default function AboutPage() {
 
       <div className="border-t border-gray-100 max-w-4xl mx-auto"></div>
 
-      <section className="max-w-4xl mx-auto px-6 py-16 border-t border-gray-100">
+      <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-2xl font-light mb-4 tracking-wide">Get in Touch</h2>
-          <p className="text-gray-700 mb-6 max-w-md">
+          <h2 className="text-xl font-medium mb-6">Get in Touch</h2>
+          <p className="text-gray-700 mb-8 max-w-md">
             I'm always open to discussing new projects or opportunities.
           </p>
           <Link 
