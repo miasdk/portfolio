@@ -10,7 +10,7 @@ export const projects: Project[] = [
     description: "Full-stack e-commerce platform featuring 25+ documented REST API endpoints, advanced PostgreSQL full-text search, and interactive Swagger documentation. Built with scalable design patterns including Firebase authentication, Stripe payment processing, and optimized database queries. Deployed on Vercel/Render with comprehensive CI/CD pipeline.",
     technologies: ["react", "nodejs", "express", "postgresql", "firebase", "tailwindcss"],
     date: "01/2025",
-    lastUpdated: "2025-07-07",
+    lastUpdated: "2025-01-27",
     status: "complete", 
     links: {
       github: "https://github.com/miasdk/Vite-Ecommerce-Template",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: "Next.js portfolio featuring server-side rendering, responsive design, and custom component library for consistent UI/UX.",
     technologies: ["typescript", "javascript", "react", "nextjs", "tailwindcss"],
     date: "04/2025",
-    lastUpdated: "2025-07-07",
+    lastUpdated: "2025-01-27",
     status: "complete", 
     links: {
       github: "https://github.com/miasdk/Portfolio",
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     "docker"
   ],
   date: "06/2025",
-  lastUpdated: "2025-07-04", // Update to today's date
+  lastUpdated: "2025-01-27", // Update to today's date
   status: "in-progress", // Keep as in-progress since AI integration isn't complete
   links: {
     github: "https://github.com/miasdk/medical-referral-hub", // Update with your actual GitHub username
