@@ -55,7 +55,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     id: "experience2",
-    role: "Web Development Student Developer",
+    role: "Web Development Student",
     company: "CUNY Hunter College",
     period: "Jan 2025 - May 2025",
     logo: HunterLogo,

@@ -1,6 +1,7 @@
 import { profile } from "../config/profile";
 import { FaGithub, FaLinkedin, FaHeart } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import ViewCounter from "./ViewCounter";
 
 export default function Footer() {
     const currentYear = 2025; 
@@ -13,7 +14,10 @@ export default function Footer() {
                         Made with <FaHeart className="inline text-red-500" /> by {profile.name}
                     </p>
                     
-                    &copy; {currentYear} {profile.name}. All rights reserved.
+                    <div className="flex items-center gap-4 mt-1">
+                        <span>&copy; {currentYear} {profile.name}. All rights reserved.</span>
+                        <ViewCounter className="text-gray-400" />
+                    </div>
                 </div>
                 <div className="flex space-x-4">
                     <a href={profile.links?.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
