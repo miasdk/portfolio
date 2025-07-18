@@ -51,7 +51,7 @@ export default function TechnologyShowcase() {
   return (
     <div className="space-y-8">
       <div className="flex justify-center mb-8">
-        <div className="bg-white p-2 rounded-lg shadow-sm border border-gray-100">
+        <div className="bg-white p-2 rounded-sm shadow-sm border border-gray-100">
           <ColorSchemeToggle currentScheme={colorScheme} onChange={setColorScheme} />
         </div>
       </div>

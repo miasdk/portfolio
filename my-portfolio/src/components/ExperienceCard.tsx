@@ -15,7 +15,7 @@ interface ExperienceCardProps {
     company: string
     period: string
     logo?: string
-    description: string[]
+    highlights: string[]
     skills: string[]
     metrics?: Metric[]
     location: {
@@ -26,11 +26,11 @@ interface ExperienceCardProps {
 }
 
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
-  const { role, company, period, logo, description, skills, metrics, location } = experience
+  const { role, company, period, logo, highlights, skills, metrics, location } = experience
 
   return (
-    <article className="group relative rounded-xl overflow-hidden">
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray-50 via-white to-gray-50 shadow-md group-hover:shadow-lg transition-all duration-300"></div>
+    <article className="group relative rounded-sm overflow-hidden">
+      <div className="absolute inset-0 rounded-sm bg-gradient-to-r from-gray-50 via-white to-gray-50 shadow-md group-hover:shadow-lg transition-all duration-300"></div>
 
       <div className="relative z-10 flex flex-col h-full">
         <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -76,7 +76,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
 
         <div className="px-6 pb-4 pl-16">
           <ul className="space-y-3">
-            {description.map((item, i) => (
+            {highlights.map((item, i) => (
               <li key={i} className="text-gray-700 text-sm flex items-start leading-relaxed group/item">
                 <span className="text-gray-400 mr-2 mt-1 flex-shrink-0 group-hover/item:text-gray-900 transition-colors">
                   <ChevronRight className="w-3.5 h-3.5" />

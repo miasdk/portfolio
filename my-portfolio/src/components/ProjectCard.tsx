@@ -79,7 +79,7 @@ export default function ProjectCard({
   const imageHeight = variant === "detailed" ? "h-56 sm:h-64" : "h-48 sm:h-56"; // Responsive fixed heights
 
   return (
-    <article className={`group relative h-full flex flex-col rounded-xl overflow-hidden bg-white ${className}`}>
+    <article className={`group relative h-full flex flex-col rounded-sm overflow-hidden bg-white ${className}`}>
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray-100 to-gray-50 shadow-md group-hover:shadow-lg transition-all duration-300"></div>
 
       <div className="relative flex flex-col h-full z-10">
@@ -265,7 +265,7 @@ export default function ProjectCard({
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium rounded-lg transition-colors"
                 >
-                  Live Demo <ArrowUpRight className="w-3.5 h-3.5 ml-1.5" />
+                  View Demo <ArrowUpRight className="w-3.5 h-3.5 ml-1.5" />
                 </Link>
               )}
               {project.links?.github && (

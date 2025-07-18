@@ -126,7 +126,7 @@ export default function ContactForm() {
 
   // Main form view
   return (
-    <div className="relative overflow-hidden rounded-xl">
+    <div className="relative overflow-hidden rounded-sm">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white opacity-70"></div>
 

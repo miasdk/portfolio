@@ -17,9 +17,9 @@ export const experience: ExperienceItem[] = [
     
     // Medium view - scannable highlights
     highlights: [
-      "Built multiple applications including ML models and full-stack systems in collaborative team environment",
+      "Built ML models and full-stack applications using Python and TypeScript in collaborative environment",
       "Optimized application performance through caching, code splitting, and lazy loading techniques",
-      "Implemented LLM integration with hyperparameter tuning and deployment on AWS and Vercel"
+      "Deployed LLM integrations with hyperparameter tuning on AWS and Vercel with CI/CD pipelines"
     ],
     
     // Detailed view - full technical descriptions
@@ -63,8 +63,9 @@ export const experience: ExperienceItem[] = [
     summary: "Designed WCAG 2.1 accessible React components with comprehensive form validation",
     
     highlights: [
-      "Designed WCAG 2.1 accessible React components with comprehensive form validation",
-      "Deployed applications with CI/CD ensuring reliable uptime; collaborated on technical architecture decisions"
+      "Designed WCAG 2.1 accessible React components with TypeScript and comprehensive form validation",
+      "Built responsive web applications with TailwindCSS ensuring cross-browser compatibility",
+      "Deployed applications with CI/CD pipelines and collaborated on technical architecture decisions"
     ],
     
     description: [
@@ -107,8 +108,9 @@ export const experience: ExperienceItem[] = [
     summary: "Engineered portfolio management features for client base, enhanced user experience and satisfaction",
     
     highlights: [
-      "Engineered portfolio management features for client base, enhanced user experience and satisfaction",
-      "Implemented comprehensive testing suite with Jest; architected secure access control with role-based permissions"
+      "Engineered portfolio management features using React and TypeScript for enhanced user experience",
+      "Developed responsive dashboard interfaces with real-time data visualization and financial charts",
+      "Implemented comprehensive testing with Jest and architected secure role-based access control"
     ],
     
     description: [
@@ -152,8 +154,9 @@ export const experience: ExperienceItem[] = [
     summary: "Developed full-stack applications with React/Next.js; engaged in pair programming sessions",
     
     highlights: [
-      "Developed full-stack applications with React/Next.js; engaged in pair programming sessions",
-      "Created RESTful APIs with Express.js; applied performance optimization techniques"
+      "Developed full-stack applications with React/Next.js and TypeScript in intensive web development program",
+      "Created RESTful APIs with Express.js and Node.js, integrating third-party services and databases",
+      "Applied performance optimization techniques and engaged in pair programming with Git version control"
     ],
     
     description: [
