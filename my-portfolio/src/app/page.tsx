@@ -222,7 +222,7 @@ export default function Home() {
           <div className="w-20 h-1 bg-gray-900 mx-auto mb-6"></div>
 
           <p className="text-center mb-10 text-gray-700 max-w-2xl mx-auto">
-            Questions, collaboration ideas, or just saying hi? I'd love to hear from you 🤗 
+            I'm always looking for new opportunities to collaborate on projects. Feel free to reach out using the form below!
           </p>
 
           <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8">
